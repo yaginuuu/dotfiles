@@ -18,8 +18,6 @@ source ~/.vimrc.bundle
 colorscheme molokai
 " 構文毎に文字色を変化させる
 syntax on
-" erbファイルをrubyファイルとして認識する
-autocmd BufNewFile,BufRead *.erb set filetype=ruby
 "pluginを使用可能にする
 filetype plugin indent on
 "行番号表示
