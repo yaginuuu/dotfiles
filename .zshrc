@@ -57,13 +57,14 @@ alias grep="grep --color -n -I --exclude='*.svn-*' --exclude='entries' --exclude
 #
 # ls
 alias l="ls -a" # color for darwin
-alias ls="ls -a"
 alias la="ls -la"
 alias l1="ls -1"
+alias ls="ls -a"
 # vim
 alias vi="vim"
 # tree
 alias tree="tree -NC" # N: 文字化け対策, C:色をつける
+
 
 # cdしたあとで、自動的に ls する
 function chpwd() { ls -1 }
@@ -72,6 +73,7 @@ function chpwd() { ls -1 }
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+
 
 # User configuration
 
