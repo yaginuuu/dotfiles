@@ -49,6 +49,9 @@ NeoBundle 'https://github.com/editorconfig/editorconfig-vim'
 
 filetype plugin indent on
 
+"「%」コマンドの強化, 対応するタグ移動
+NeoBundle 'matchit.zip'
+
 " Installation check.
 if neobundle#exists_not_installed_bundles()
   echomsg 'Not installed bundles : ' .
