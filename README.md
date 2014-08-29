@@ -4,8 +4,13 @@ What?
 @yaginuuuのdotfiles
 
 dotfileをぎっはぶで管理.
-ホームにリンクを貼って反映させます.
 
-.zshrcファイルだったらこんな感じで<br>
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
+How to set up
+========
+1. cd
+2. git clone https://github.com/yaginuuu/.dotfiles.git
+3. cd ~/.dotfiles
+4. sh setup.sh
+
+
 
