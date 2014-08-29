@@ -41,6 +41,14 @@ set noswapfile
 set ruler
 " 行番号の色
 highlight LineNr ctermfg=yellow
+"コマンドラインに使われる画面上の行数
+set cmdheight=2
+" コマンドラインモードで<Tab>キーによるファイル名補完を有効にする
+set wildmenu
+" 入力中のコマンドを表示する
+set showcmd
+" 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
+set smartindent
 " 自動的に閉じカッコを入力
 " imap { {}<LEFT>
 " imap [ []<LEFT>

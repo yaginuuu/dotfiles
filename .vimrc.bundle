@@ -24,16 +24,18 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimshell'
+" ファイルオープンを便利にする
 NeoBundle 'Shougo/unite.vim'
 " シングルクオートとダブルクオートの入れ替え等
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'scrooloose/syntastic'
+"ファイルをツリー表示してくれる
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'altercation/vim-colors-solarized'
 "\cでコメントアウトできる
 NeoBundle "tyru/caw.vim.git"
-NeoBundle 'thinca/vim-quickrun'
 "行末に半角スペースがあると色付けしてくれる
 NeoBundle 'https://github.com/bronson/vim-trailing-whitespace'
 nmap <Leader>c <Plug>(caw:i:toggle)
