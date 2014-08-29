@@ -9,7 +9,7 @@ rbenv_version() {
 }
 
 PROMPT='
-%{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%} ⌚ %{$fg_bold[blue]%}%*%{$reset_color%}
+%{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%} ⌚  %{$fg_bold[blue]%}%*%{$reset_color%}
 %F{yellow}✖ ^∀ ^✖ %f '
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[magenta]%}"
