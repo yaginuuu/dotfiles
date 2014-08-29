@@ -1,12 +1,12 @@
 " yaginuuu's .vimrc
 
 " Configuration file for vim
-set modelines=0		" CVE-2007-2438
+set modelines=0  " CVE-2007-2438
 
 " Normally we use vim-extensions. If you want true vi-compatibility
 " remove change the following statements
-set nocompatible	" Use Vim defaults instead of 100% vi compatibility
-set backspace=2		" more powerful backspacing
+set nocompatible " Use Vim defaults instead of 100% vi compatibility
+set backspace=2  " more powerful backspacing
 
 " Don't write backup file if vim is being called by "crontab -e"
 au BufWrite /private/tmp/crontab.* set nowritebackup
@@ -68,7 +68,7 @@ function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
 endfunction
 
-" Set tabline.
+" タブ関連
 function! s:my_tabline()  "{{{
   let s = ''
   for i in range(1, tabpagenr('$'))
@@ -107,3 +107,5 @@ map <silent> [Tag]n :tabnext<CR>
 " tn 次のタブ
 map <silent> [Tag]p :tabprevious<CR>
 " tp 前のタブ
+map <silent> [Tag]t :tabf .<CR>
+" tt 新規タブを開いてツリーで表示
