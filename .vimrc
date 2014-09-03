@@ -21,8 +21,22 @@ source ~/.vimrc.bundle
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.txt set filetype=markdown
 " Markdown Preview
+let g:previm_open_cmd = ''
 " <F7>でプレビュー
 nnoremap <silent> <F7> :PrevimOpen<CR>
+" [,]+j+j+j...で下にスクロール、[,]+k+k+k...で上にスクロール
+nnoremap <silent> <Leader>j :ChromeScrollDown<CR>
+nnoremap <silent> <Leader>k :ChromeScrollUp<CR>
+call submode#enter_with('cscroll', 'n', '', '<Leader>j', ':ChromeScrollDown<CR>')
+call submode#enter_with('cscroll', 'n', '', '<Leader>k', ':ChromeScrollUp<CR>')
+call submode#leave_with('cscroll', 'n', '', 'n')
+call submode#map('cscroll', 'n', '', 'j', ':ChromeScrollDown<CR>')
+call submode#map('cscroll', 'n', '', 'k', ':ChromeScrollUp<CR>')
+
+" 現在のタブを閉じる
+nnoremap <silent> <Leader>q :ChromeTabClose<CR>
+" [,]+f+{char}でキーを Google Chrome に送る
+nnoremap <buffer> <Leader>f :ChromeKey<Space>
 "-----------------------------------------------------------------------------"
 " タブ関連
 " nywhere SID.

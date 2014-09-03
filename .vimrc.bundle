@@ -30,6 +30,8 @@ NeoBundle 'vim-scripts/vim-auto-save'
 NeoBundle 'kannokanno/previm'
 " 連続スクロールを実現するために必要
 NeoBundle 'kana/vim-submode'
+" ブラウザでプレビューするために必要
+NeoBundle 'tyru/open-browser.vim'
 "-----------------------------------------------------------------------------"
 " ruby & rails
 " rails用便利plugin
