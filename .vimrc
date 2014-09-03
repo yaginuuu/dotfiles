@@ -1,19 +1,17 @@
+
 " yaginuuu's .vimrc
-
-" Configuration file for vim
-set modelines=0  " CVE-2007-2438
-
-" Normally we use vim-extensions. If you want true vi-compatibility
-" remove change the following statements
-set nocompatible " Use Vim defaults instead of 100% vi compatibility
-set backspace=2  " more powerful backspacing
-
+"-----------------------------------------------------------------------------"
+" モードライン設定
+set modelines=0
+" backspace設定
+set backspace=2
 " Don't write backup file if vim is being called by "crontab -e"
 au BufWrite /private/tmp/crontab.* set nowritebackup
 " Don't write backup file if vim is being called by "chpass"
 au BufWrite /private/etc/pw.* set nowritebackup
 source ~/.vimrc.bundle
-"-----------------------------------------------------------"
+"-----------------------------------------------------------------------------"
+
 "カラースキーマ
 colorscheme molokai
 " 構文毎に文字色を変化させる
@@ -49,13 +47,14 @@ set wildmenu
 set showcmd
 " 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
 set smartindent
+"検索結果をハイライト表示する
+set hlsearch
 " 自動的に閉じカッコを入力
 " imap { {}<LEFT>
 " imap [ []<LEFT>
 " imap ( ()<LEFT>
-"検索結果をハイライト表示する
-set hlsearch
 
+"-----------------------------------------------------------------------------"
 " latex仕様
 " let tex_flavor='latex'
 " set grepprg=grep\ -nH\ $*
@@ -63,19 +62,25 @@ set hlsearch
 " let g:Tex_DefaultTargetFormat='pdf'
 " let g:Tex_CompileRule_dvi='platex --interaction=nonstopmode $*'
 " let g:Tex_FormatDependency_pdf='dvi,pdf'
-
 " PDFはPreview.appで開く
 " let g:Tex_ViewRule_pdf='open -a Preview.app
+"-----------------------------------------------------------------------------"
 
-" md仕様
+"-----------------------------------------------------------------------------"
+" Markdown仕様
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.txt set filetype=markdown
+" Markdown Preview
+" <F7>でプレビュー
+nnoremap <silent> <F7> :PrevimOpen<CR>
+"-----------------------------------------------------------------------------"
 
 "nywhere SID.
 function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
 endfunction
 
+"-----------------------------------------------------------------------------"
 " タブ関連
 function! s:my_tabline()  "{{{
   let s = ''
@@ -96,8 +101,8 @@ function! s:my_tabline()  "{{{
   return s
 endfunction "}}}
 let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
-set showtabline=2 " 常にタブラインを表示
-
+" 常にタブラインを表示
+set showtabline=2
 " The prefix key.
 nnoremap    [Tag]   <Nop>
 nmap    t [Tag]
@@ -105,7 +110,6 @@ nmap    t [Tag]
 for n in range(1, 9)
   execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
 endfor
-
 " tc 新しいタブを一番右に作る
 map <silent> [Tag]c :tablast <bar> tabnew<CR>
 " tx タブを閉じる
@@ -116,3 +120,8 @@ map <silent> [Tag]n :tabnext<CR>
 map <silent> [Tag]p :tabprevious<CR>
 " tt 新規タブを開いてツリーで表示
 map <silent> [Tag]t :tabf .<CR>
+"-----------------------------------------------------------------------------"
+"-----------------------------------------------------------------------------"
+"-----------------------------------------------------------------------------"
+"-----------------------------------------------------------------------------"
+"-----------------------------------------------------------------------------"

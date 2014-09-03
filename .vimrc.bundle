@@ -1,6 +1,6 @@
-" yaginuuu's neobundle
-" NeoBundle の設定
 
+" yaginuuu's vim Plugin
+"-----------------------------------------------------------------------------"
 set nocompatible
 
 filetype off
@@ -11,14 +11,14 @@ endif
 
 call neobundle#rc(expand('~/.vim/bundle/'))
 
-" Let NeoBundle manage NeoBundle
+" bundle管理ツール
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Recommended to install
 NeoBundle 'Shougo/vimproc'
+filetype plugin indent on
+"-----------------------------------------------------------------------------"
 
-" My Bundles here:
-"
 "補完系
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
@@ -28,6 +28,7 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimshell'
+
 " ファイルオープンを便利にする
 NeoBundle 'Shougo/unite.vim'
 " シングルクオートとダブルクオートの入れ替え等
@@ -49,10 +50,27 @@ NeoBundle 'vim-scripts/AnsiEsc.vim'
 "editorconfigをvimで適応させるやつ
 NeoBundle 'https://github.com/editorconfig/editorconfig-vim'
 
-filetype plugin indent on
-
 "「%」コマンドの強化, 対応するタグ移動
 NeoBundle 'matchit.zip'
+
+" rails用便利plugin
+NeoBundle 'rails.vim'
+
+"編集しているファイルを自動保存するために必要
+NeoBundle 'vim-scripts/vim-auto-save'
+"Vim で編集した Markdonwファイルをブラウザプレビューするために必要(自動リロード機能付き)
+NeoBundle 'kannokanno/previm'
+"連続スクロールを実現するために必要
+NeoBundle 'kana/vim-submode'
+
+" NERDTree関連
+" 隠しファイルを表示する
+let NERDTreeShowHidden = 1
+"引数なしで実行したとき、NERDTreeを実行する
+let file_name = expand("%:p")
+if has('vim_starting') &&  file_name == ""
+  autocmd VimEnter * execute 'NERDTree ./'
+endif
 
 " Installation check.
 if neobundle#exists_not_installed_bundles()
@@ -60,3 +78,4 @@ if neobundle#exists_not_installed_bundles()
         \ string(neobundle#get_not_installed_bundle_names())
   echomsg 'Please execute ":NeoBundleInstall" command.'
 endif
+
