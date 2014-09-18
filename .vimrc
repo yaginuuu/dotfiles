@@ -81,7 +81,7 @@ map <silent> [Tag]n :tabnext<CR>
 " tp 前のタブ
 map <silent> [Tag]p :tabprevious<CR>
 " tt 新規タブを開いてツリーで表示
-map <silent> [Tag]t :tabf .<CR>
+map <silent> [Tag]t :tablast <bar> tabf .<CR>
 "-----------------------------------------------------------------------------"
 " NERDTree関連
 " 隠しファイルを表示する
