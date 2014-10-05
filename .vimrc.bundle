@@ -69,7 +69,6 @@ NeoBundle 'https://github.com/editorconfig/editorconfig-vim'
 " ノーマルモードになったら自動で保存
 NeoBundle 'syui/airsave.vim'
 
-
 " Installation check.
 if neobundle#exists_not_installed_bundles()
   echomsg 'Not installed bundles : ' .
