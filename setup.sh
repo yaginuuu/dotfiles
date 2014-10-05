@@ -5,3 +5,5 @@ ln -sf ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/.vimrc ~/.vimrc
 ln -sf ~/.dotfiles/.vimrc.bundle ~/.vimrc.bundle
 ln -sf ~/.dotfiles/.zshrc ~/.zshrc
+ln -sf ~/.dotfiles/.templates ~/.templates
+ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig

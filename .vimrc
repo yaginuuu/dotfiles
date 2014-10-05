@@ -126,6 +126,12 @@ if has("autocmd")
 endif
 
 "-----------------------------------------------------------------------------"
+" テンプレート集
+augroup HTML
+  autocmd!
+  autocmd BufNewFile *.html 0r $HOME/.templates/template.html
+augroup END
+"-----------------------------------------------------------------------------"
 
 " モードライン設定
 set modelines=0
