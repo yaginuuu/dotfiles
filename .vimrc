@@ -145,8 +145,6 @@ syntax on
 set number
 " 括弧の対応表示時間
 set showmatch matchtime=1
-" タブを設定"
-set ts=2 sw=2 sts=2
 " タブ入力がスペースに変換される
 set expandtab
 " タイトルを表示
@@ -168,8 +166,10 @@ set wildmenu
 set showcmd
 " 検索結果をハイライト表示する
 set hlsearch
-" 自動的に閉じカッコを入力
-" imap { {}<LEFT>
-" imap [ []<LEFT>
-" imap ( ()<LEFT>
-
+" 自動的に閉じカッコを入力してインデント
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
+inoremap [<Enter> []<Left><CR><ESC><S-o>
+inoremap (<Enter> ()<Left><CR><ESC><S-o>))]]}}
+" pasteモード(,iでもペーストモードへ. ノーマルに戻るとインサートに戻す)
+nnoremap ,i :<C-u>set paste<Return>i
+autocmd InsertLeave * set nopaste
