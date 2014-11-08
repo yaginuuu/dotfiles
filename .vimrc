@@ -7,6 +7,7 @@ au BufWrite /private/tmp/crontab.* set nowritebackup
 au BufWrite /private/etc/pw.* set nowritebackup
 source ~/.vimrc.bundle
 "-----------------------------------------------------------------------------"
+
 " latex関連
 " let tex_flavor='latex'
 " set grepprg=grep\ -nH\ $*
@@ -16,7 +17,9 @@ source ~/.vimrc.bundle
 " let g:Tex_FormatDependency_pdf='dvi,pdf'
 " PDFはPreview.appで開く
 " let g:Tex_ViewRule_pdf='open -a Preview.app
+
 "-----------------------------------------------------------------------------"
+
 " Markdown関連
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.txt set filetype=markdown
@@ -32,12 +35,13 @@ call submode#enter_with('cscroll', 'n', '', '<Leader>k', ':ChromeScrollUp<CR>')
 call submode#leave_with('cscroll', 'n', '', 'n')
 call submode#map('cscroll', 'n', '', 'j', ':ChromeScrollDown<CR>')
 call submode#map('cscroll', 'n', '', 'k', ':ChromeScrollUp<CR>')
-
 " 現在のタブを閉じる
 nnoremap <silent> <Leader>q :ChromeTabClose<CR>
 " [,]+f+{char}でキーを Google Chrome に送る
 nnoremap <buffer> <Leader>f :ChromeKey<Space>
+
 "-----------------------------------------------------------------------------"
+
 " タブ関連
 " nywhere SID.
 function! s:SID_PREFIX()
@@ -82,11 +86,15 @@ map <silent> [Tag]n :tabnext<CR>
 map <silent> [Tag]p :tabprevious<CR>
 " tt 一番右に新規タブを開いてツリーで表示
 map <silent> [Tag]t :tablast <bar> tabf .<CR>
+
 "-----------------------------------------------------------------------------"
+
 " NERDTree関連
 " 隠しファイルを表示する
 let NERDTreeShowHidden = 1
+
 "-----------------------------------------------------------------------------"
+
 " インデント関連
 set autoindent   " 自動でインデント
 set smartindent  " 新しい行を開始したときに、新しい行のインデントを現在行と同じ量にする。
@@ -126,11 +134,18 @@ if has("autocmd")
 endif
 
 "-----------------------------------------------------------------------------"
+
 " テンプレート集
 augroup HTML
   autocmd!
   autocmd BufNewFile *.html 0r $HOME/.templates/template.html
 augroup END
+
+augroup MD
+  autocmd!
+  autocmd BufNewFile *.md 0r $HOME/.templates/template.md
+augroup END
+
 "-----------------------------------------------------------------------------"
 
 " モードライン設定

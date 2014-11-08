@@ -7,3 +7,5 @@ ln -sf ~/.dotfiles/.vimrc.bundle ~/.vimrc.bundle
 ln -sf ~/.dotfiles/.zshrc ~/.zshrc
 ln -sf ~/.dotfiles/.templates ~/.templates
 ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
+
+git config --global core.excludesfile ~/.gitignore
