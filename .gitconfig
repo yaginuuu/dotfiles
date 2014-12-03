@@ -1,7 +1,7 @@
 [user]
-	name = yaginuuu
-	email = yaginuuu56@gmail.com
+        name = yaginuuu
+        email = yaginuuu56@gmail.com
 [color]
-	ui = true
+        ui = true
 [core]
-	excludesfile = /Users/yaginuuu/.gitignore
+        excludesfile = /home/yaginuuu/.gitignore
