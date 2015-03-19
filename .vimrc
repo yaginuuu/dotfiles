@@ -27,18 +27,6 @@ autocmd BufNewFile,BufRead *.txt set filetype=markdown
 let g:previm_open_cmd = ''
 " <F7>でプレビュー
 nnoremap <silent> <F7> :PrevimOpen<CR>
-" [,]+j+j+j...で下にスクロール、[,]+k+k+k...で上にスクロール
-nnoremap <silent> <Leader>j :ChromeScrollDown<CR>
-nnoremap <silent> <Leader>k :ChromeScrollUp<CR>
-call submode#enter_with('cscroll', 'n', '', '<Leader>j', ':ChromeScrollDown<CR>')
-call submode#enter_with('cscroll', 'n', '', '<Leader>k', ':ChromeScrollUp<CR>')
-call submode#leave_with('cscroll', 'n', '', 'n')
-call submode#map('cscroll', 'n', '', 'j', ':ChromeScrollDown<CR>')
-call submode#map('cscroll', 'n', '', 'k', ':ChromeScrollUp<CR>')
-" 現在のタブを閉じる
-nnoremap <silent> <Leader>q :ChromeTabClose<CR>
-" [,]+f+{char}でキーを Google Chrome に送る
-nnoremap <buffer> <Leader>f :ChromeKey<Space>
 
 "-----------------------------------------------------------------------------"
 
@@ -48,7 +36,7 @@ function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
 endfunction
 
-function! s:my_tabline()  "{{{
+function! s:my_tabline()
   let s = ''
   for i in range(1, tabpagenr('$'))
     let bufnrs = tabpagebuflist(i)
@@ -65,7 +53,7 @@ function! s:my_tabline()  "{{{
   endfor
   let s .= '%#TabLineFill#%T%=%#TabLine#'
   return s
-endfunction "}}}
+endfunction
 let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
 " 常にタブラインを表示
 set showtabline=2
@@ -190,6 +178,30 @@ let b:surround_68  = "<div class=\"section\">\r</div>"
 let g:surround_{char2nr("=")} = "<% \r %>"
 let g:surround_{char2nr("-")} = "<%= \r %>"
 
+"-----------------------------------------------------------------------------"
+" ag関連
+" insert modeで開始
+let g:unite_enable_start_insert = 1
+
+" 大文字小文字を区別しない
+let g:unite_enable_ignore_case = 1
+let g:unite_enable_smart_case = 1
+
+" grep検索
+nnoremap <silent> ,g  :<C-u>Unite grep -buffer-name=search-buffer<CR>
+
+" カーソル位置の単語をgrep検索
+nnoremap <silent> ,cg :<C-u>Unite grep -buffer-name=search-buffer<CR><C-R><C-W>
+
+" grep検索結果の再呼出
+nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
+
+" unite grep に ag(The Silver Searcher) を使う
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
 "-----------------------------------------------------------------------------"
 
 " モードライン設定

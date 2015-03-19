@@ -4,4 +4,4 @@
 [color]
         ui = true
 [core]
-        excludesfile = /home/yaginuuu/.gitignore
+	excludesfile = /Users/lancers163-01/.gitignore

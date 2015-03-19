@@ -16,7 +16,7 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # エディタ
-export EDITOR=/usr/local/bin/vim
+export EDITOR=/usr/bin/vim
 #
 # # ページャ
 export PAGER=/usr/local/bin/vimpager
