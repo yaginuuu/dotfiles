@@ -64,8 +64,6 @@ nmap    t [Tag]
 for n in range(1, 9)
   execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
 endfor
-" tc 新しいタブを一番右に作る
-map <silent> [Tag]c :tablast <bar> tabnew<CR>
 " tx タブを閉じる
 map <silent> [Tag]x :tabclose<CR>
 " tn 次のタブ
@@ -75,6 +73,43 @@ map <silent> [Tag]p :tabprevious<CR>
 " tt 一番右に新規タブを開いてツリーで表示
 map <silent> [Tag]t :tablast <bar> tabf .<CR>
 
+"-----------------------------------------------------------------------------"
+" unite.vim, 画面分割, 画面タブ設定
+nnoremap s <Nop>
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+nnoremap sJ <C-w>J
+nnoremap sK <C-w>K
+nnoremap sL <C-w>L
+nnoremap sH <C-w>H
+nnoremap sn gt
+nnoremap sp gT
+nnoremap sr <C-w>r
+nnoremap s= <C-w>=
+nnoremap sw <C-w>w
+nnoremap so <C-w>_<C-w>|
+nnoremap sO <C-w>=
+nnoremap sN :<C-u>bn<CR>
+nnoremap sP :<C-u>bp<CR>
+nnoremap st :<C-u>tabnew<CR>
+nnoremap sT :<C-u>Unite tab<CR>
+nnoremap ss :<C-u>sp<CR>
+nnoremap sv :<C-u>vs<CR>
+nnoremap sq :<C-u>q<CR>
+nnoremap sQ :<C-u>bd<CR>
+nnoremap sb :<C-u>Unite buffer_tab -buffer-name=file<CR>
+nnoremap sB :<C-u>Unite buffer -buffer-name=file<CR>
+
+call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
+call submode#enter_with('bufmove', 'n', '', 's<', '<C-w><')
+call submode#enter_with('bufmove', 'n', '', 's+', '<C-w>+')
+call submode#enter_with('bufmove', 'n', '', 's-', '<C-w>-')
+call submode#map('bufmove', 'n', '', '>', '<C-w>>')
+call submode#map('bufmove', 'n', '', '<', '<C-w><')
+call submode#map('bufmove', 'n', '', '+', '<C-w>+')
+call submode#map('bufmove', 'n', '', '-', '<C-w>-')
 "-----------------------------------------------------------------------------"
 
 " NERDTree関連
@@ -181,7 +216,7 @@ let g:surround_{char2nr("-")} = "<%= \r %>"
 "-----------------------------------------------------------------------------"
 " ag関連
 " insert modeで開始
-let g:unite_enable_start_insert = 1
+" let g:unite_enable_start_insert = 1
 
 " 大文字小文字を区別しない
 let g:unite_enable_ignore_case = 1
@@ -212,6 +247,8 @@ set backspace=2
 colorscheme molokai
 " 構文毎に文字色を変化させる
 syntax on
+" iTerm2で半透明にしているが、vimのcolorschemeを設定すると背景も変更されるため
+highlight Normal ctermbg=none
 " 行番号表示
 set number
 " 括弧の対応表示時間
@@ -244,3 +281,7 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o>))]]}}
 " pasteモード(,iでもペーストモードへ. ノーマルに戻るとインサートに戻す)
 nnoremap ,i :<C-u>set paste<Return>i
 autocmd InsertLeave * set nopaste
+" マウス操作可能にする
+set mouse=a
+" マウスでドラッグ動作も可能にする
+set ttymouse=xterm2

@@ -56,9 +56,9 @@ NeoBundle 'scrooloose/nerdtree'
 " \cでコメントアウトできる
 NeoBundle "tyru/caw.vim.git"
 " 行末に半角スペースがあると色付けしてくれる
-NeoBundle 'https://github.com/bronson/vim-trailing-whitespace'
-nmap <Leader>c <Plug>(caw:i:toggle)
-vmap <Leader>c <Plug>(caw:i:toggle)
+"NeoBundle 'https://github.com/bronson/vim-trailing-whitespace'
+"nmap <Leader>c <Plug>(caw:i:toggle)
+"vmap <Leader>c <Plug>(caw:i:toggle)
 
 " ログファイルを色づけしてくれる
 NeoBundle 'vim-scripts/AnsiEsc.vim'
@@ -74,6 +74,9 @@ NeoBundle 'rking/ag.vim'
 
 " End of NeoBundle
 call neobundle#end()
+
+" color
+NeoBundle 'tomasr/molokai'
 
 " Installation check.
 if neobundle#exists_not_installed_bundles()
