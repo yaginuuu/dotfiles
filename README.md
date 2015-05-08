@@ -1,16 +1,22 @@
 What?
 ========
 
-@yaginuuuのdotfiles
-
-dotfileをぎっはぶで管理.
+@yaginuuu's dotfiles.
 
 How to set up
 ========
-1. cd
-2. git clone https://github.com/yaginuuu/.dotfiles.git
-3. cd ~/.dotfiles
-4. sh setup.sh
+```
+$ git clone https://github.com/yaginuuu/.dotfiles.git
+```
+
+```
+$ cd ~/.dotfiles
+```
+
+```
+$ sh setup.sh
+```
+
 
 
 
