@@ -115,6 +115,7 @@ call submode#map('bufmove', 'n', '', '-', '<C-w>-')
 " NERDTree関連
 " 隠しファイルを表示する
 let NERDTreeShowHidden = 1
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 "-----------------------------------------------------------------------------"
 

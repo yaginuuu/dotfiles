@@ -21,6 +21,14 @@ export EDITOR=/usr/bin/vim
 # # ページャ
 export PAGER=/usr/local/bin/vimpager
 export MANPAGER=/usr/local/bin/vimpager
+
+# weka
+export CLASSPATH=$CLASSPATH:/Applications/Weka/weka-3.6.10.app/Contents/Resources/Java/
+
+#MacPorts Installer addition on 2014-09-25_at_18:39:26: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
 #
 #
 # # -------------------------------------
