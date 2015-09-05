@@ -1,4 +1,3 @@
-" yaginuuu's vim Plugin
 "-----------------------------------------------------------------------------"
 set nocompatible
 
@@ -53,10 +52,10 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'scrooloose/nerdtree'
 " \cでコメントアウトできる
 NeoBundle "tyru/caw.vim.git"
+nmap <Leader>c <Plug>(caw:i:toggle)
+vmap <Leader>c <Plug>(caw:i:toggle)
 " 行末に半角スペースがあると色付けしてくれる
 "NeoBundle 'https://github.com/bronson/vim-trailing-whitespace'
-"nmap <Leader>c <Plug>(caw:i:toggle)
-"vmap <Leader>c <Plug>(caw:i:toggle)
 
 " ログファイルを色づけしてくれる
 NeoBundle 'vim-scripts/AnsiEsc.vim'
