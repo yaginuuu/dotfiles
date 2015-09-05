@@ -1,9 +1,9 @@
 augroup HTML
   autocmd!
-  autocmd BufNewFile *.html 0r $HOME/settingVim/templates/template.html
+  autocmd BufNewFile *.html 0r $HOME/.dotfiles/settingVim/templates/template.html
 augroup END
 
 augroup MD
   autocmd!
-  autocmd BufNewFile *.md 0r $HOME/settingVim/templates/template.md
+  autocmd BufNewFile *.md 0r $HOME/.dotfiles/settingVim/templates/template.md
 augroup END
