@@ -1,4 +1,3 @@
-
 " yaginuuu's vim Plugin
 "-----------------------------------------------------------------------------"
 set nocompatible
@@ -16,7 +15,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Recommended to install
 NeoBundle 'git://github.com/Shougo/vimproc'
-filetype plugin indent on
 "-----------------------------------------------------------------------------"
 " 補完系
 NeoBundle 'Shougo/neocomplcache'
@@ -72,11 +70,21 @@ NeoBundle 'syui/airsave.vim'
 " ag
 NeoBundle 'rking/ag.vim'
 
+" erbインデントON
+NeoBundle 'othree/html5.vim'
+
 " End of NeoBundle
 call neobundle#end()
 
 " color
 NeoBundle 'tomasr/molokai'
+
+" slim syntax
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'slim-template/vim-slim.git'
+syntax enable
+filetype plugin indent on
 
 " Installation check.
 if neobundle#exists_not_installed_bundles()

@@ -1,10 +1,4 @@
-What?
-========
-
-@yaginuuu's dotfiles.
-
-How to set up
-========
+# Usage
 ```
 $ git clone https://github.com/yaginuuu/.dotfiles.git
 ```
@@ -14,7 +8,7 @@ $ cd ~/.dotfiles
 ```
 
 ```
-$ sh setup.sh
+$ sudo sh setup.sh
 ```
 
 
