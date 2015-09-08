@@ -1,3 +1,14 @@
+let g:unite_enable_start_insert=1
+let g:unite_source_history_yank_enable =1
+let g:unite_source_file_mru_limit = 200
+nmap     <Leader>f [unite]
+nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
+nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
+nnoremap <silent> ;e  :<C-u>Unite file_rec/async:!<CR>
+
 " 画面分割, 画面タブ設定
 nnoremap s <Nop>
 nnoremap sj <C-w>j
@@ -25,12 +36,16 @@ nnoremap sq :<C-u>q<CR>
 nnoremap sQ :<C-u>bd<CR>
 nnoremap sb :<C-u>Unite buffer_tab -buffer-name=file<CR>
 nnoremap sB :<C-u>Unite buffer -buffer-name=file<CR>
+"------------------------------------
+" Unite-rails.vim
+"------------------------------------
+noremap rc :<C-u>Unite rails/controller<CR>
+noremap rm :<C-u>Unite rails/model<CR>
+noremap rv :<C-u>Unite rails/view<CR>
+noremap rh :<C-u>Unite rails/helper<CR>
+noremap rs :<C-u>Unite rails/stylesheet<CR>
+noremap rj :<C-u>Unite rails/javascript<CR>
+noremap rr :<C-u>Unite rails/route<CR>
+noremap rg :<C-u>Unite rails/gemfile<CR>
+noremap rt :<C-u>Unite rails/spec<CR>
 
-" call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
-" call submode#enter_with('bufmove', 'n', '', 's<', '<C-w><')
-" call submode#enter_with('bufmove', 'n', '', 's+', '<C-w>+')
-" call submode#enter_with('bufmove', 'n', '', 's-', '<C-w>-')
-" call submode#map('bufmove', 'n', '', '>', '<C-w>>')
-" call submode#map('bufmove', 'n', '', '<', '<C-w><')
-" call submode#map('bufmove', 'n', '', '+', '<C-w>+')
-" call submode#map('bufmove', 'n', '', '-', '<C-w>-')

@@ -23,7 +23,7 @@ NeoBundle 'Shougo/neosnippet-snippets'
 " Markdown
 " 編集しているファイルを自動保存するために必要
 " NeoBundle 'vim-scripts/vim-auto-save'
-" Vim で編集した Markdonwファイルをブラウザプレビューするために必要(自動リロード機能付き)
+" Vim で編集した Markdownファイルをブラウザプレビューするために必要(自動リロード機能付き)
 NeoBundle 'kannokanno/previm'
 " 連続スクロールを実現するために必要
 NeoBundle 'kana/vim-submode'
@@ -31,12 +31,19 @@ NeoBundle 'kana/vim-submode'
 NeoBundle 'tyru/open-browser.vim'
 "-----------------------------------------------------------------------------"
 " ruby & rails
-" rails用便利plugin
+" gfで移動, 元に戻るにはC-o, :A, :R
 NeoBundle 'rails.vim'
 " Ruby向けにendを自動挿入してくれる
 NeoBundle 'tpope/vim-endwise'
 "「%」コマンドの強化, 対応するタグ移動
 NeoBundle 'matchit.zip'
+" コーディングルールチェック
+NeoBundle 'scrooloose/syntastic'
+let g:syntastic_mode_map = { 'mode': 'passive',
+            \ 'active_filetypes': ['ruby'] }
+let g:syntastic_ruby_checkers = ['rubocop']
+" Rails版unite
+NeoBundle 'https://github.com/basyura/unite-rails.git'
 "-----------------------------------------------------------------------------"
 
 NeoBundle 'thinca/vim-quickrun'
@@ -84,6 +91,9 @@ call vundle#rc()
 Bundle 'slim-template/vim-slim.git'
 syntax enable
 filetype plugin indent on
+
+" :Switchでキーワード切り替え
+NeoBundle "AndrewRadev/switch.vim"
 
 " Installation check.
 if neobundle#exists_not_installed_bundles()

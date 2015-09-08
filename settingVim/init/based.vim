@@ -40,6 +40,11 @@ autocmd InsertLeave * set nopaste
 " set ttymouse=xterm2
 " クリップボード許可 => http://qiita.com/Kumamon/items/3ca4ab80fc465d8eed7e
 set clipboard=unnamed,autoselect
+" def...end移動
+if !exists('loaded_matchit')
+  " matchitを有効化
+  runtime macros/matchit.vim
+endif
 "-----------------------------------------------------------------------------"
 " Don't write backup file if vim is being called by "crontab -e"
 au BufWrite /private/tmp/crontab.* set nowritebackup
