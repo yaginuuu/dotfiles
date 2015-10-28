@@ -17,7 +17,6 @@ ln -sf ~/.dotfiles/settingVim/plugins/unite.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/settingVim/plugins/surround.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/settingVim/plugins/ag.vim ~/.vim/userautoload/plugins
 
-ln -sf ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ln -sf ~/.dotfiles/git/.gitignore ~/.gitignore
 
 git config --global core.excludesfile ~/.gitignore
