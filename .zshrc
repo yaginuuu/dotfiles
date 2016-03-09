@@ -27,6 +27,7 @@ export CLASSPATH=$CLASSPATH:/Applications/Weka/weka-3.6.10.app/Contents/Resource
 
 #MacPorts Installer addition on 2014-09-25_at_18:39:26: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+export MANPATH=/opt/local/man:$MANPATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 #

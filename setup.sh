@@ -1,6 +1,10 @@
 mkdir -p ~/.vim/userautoload 2>/dev/null
 mkdir -p ~/.vim/userautoload/init 2>/dev/null
 mkdir -p ~/.vim/userautoload/plugins 2>/dev/null
+mkdir -p ~/.vim/rc 2>/dev/null
+
+ln -sf ~/.dotfiles/settingVim/dein.toml ~/.vim/rc/dein.toml
+
 ln -sf ~/.dotfiles/.oh-my-zsh ~/.oh-my-zsh
 ln -sf ~/.dotfiles/.bash_profile ~/.bash_profile
 ln -sf ~/.dotfiles/.tmux.conf ~/.tmux.conf

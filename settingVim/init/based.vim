@@ -38,7 +38,9 @@ autocmd InsertLeave * set nopaste
 " set mouse=a
 " マウスでドラッグ動作も可能にする
 " set ttymouse=xterm2
-" クリップボード許可 => http://qiita.com/Kumamon/items/3ca4ab80fc465d8eed7e
+" クリップボード許可
+" => http://qiita.com/Kumamon/items/3ca4ab80fc465d8eed7e
+" => http://qiita.com/shoma2da/items/92ea8badcd4655b6106c
 set clipboard=unnamed,autoselect
 " def...end移動
 if !exists('loaded_matchit')
