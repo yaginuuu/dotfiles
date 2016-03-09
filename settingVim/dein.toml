@@ -1,4 +1,10 @@
+#[dein] Error installing plugins:
+#[dein]   editorconfig-vim
+#[dein]   caw.vim
+#[dein]   vimshell
 # 補完系
+[[plugins]]
+repo = 'Shougo/vimproc'
 [[plugins]]
 repo = 'Shougo/neocomplcache'
 [[plugins]]
@@ -8,7 +14,8 @@ repo = 'Shougo/neosnippet-snippets'
 
 # Markdown
 # 編集しているファイルを自動保存するために必要
-# 'vim-scripts/vim-auto-save'
+[[plugins]]
+repo = 'vim-scripts/vim-auto-save'
 # Vim で編集した Markdownファイルをブラウザプレビューするために必要repo = 自動リロード機能付き
 [[plugins]]
 repo = 'kannokanno/previm'
@@ -22,7 +29,7 @@ repo = 'tyru/open-browser.vim'
 # ruby & rails
 # gfで移動, 元に戻るにはC-o, :A, :R
 [[plugins]]
-repo = 'rails.vim'
+repo = 'tpope/vim-rails'
 # Ruby向けにendを自動挿入してくれる
 [[plugins]]
 repo = 'tpope/vim-endwise'
@@ -30,40 +37,41 @@ repo = 'tpope/vim-endwise'
 [[plugins]]
 repo = 'matchit.zip'
 # コーディングルールチェック
-# NeoBundle 'scrooloose/syntastic'
-# let g:syntastic_mode_map = { 'mode': 'passive',
-#             \ 'active_filetypes': ['ruby'] }
-# let g:syntastic_ruby_checkers = ['rubocop']
+[[plugins]]
+repo = 'scrooloose/syntastic'
 # Rails版unite
-# NeoBundle 'https://github.com/basyura/unite-rails.git'
-
+[[plugins]]
+repo = 'basyura/unite-rails.git'
 
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 [[plugins]]
 repo = 'altercation/vim-colors-solarized'
 [[plugins]]
-repo = 'scrooloose/syntastic'
-[[plugins]]
 repo = 'Shougo/vimshell'
 
 # ファイルオープンを便利にする
 [[plugins]]
+repo = 'Shougo/neomru.vim'
+[[plugins]]
 repo = 'Shougo/unite.vim'
+depends = 'neomru.vim'
+
 # シングルクオートとダブルクオートの入れ替え等
 [[plugins]]
 repo = 'tpope/vim-surround'
+
 # ファイルをツリー表示してくれる
 [[plugins]]
 repo = 'scrooloose/nerdtree'
+
 # \cでコメントアウトできる
 [[plugins]]
-#repo = 'tyru/caw.vim.git'
-nmap <Leader>c <Plug>repo = caw:i:toggle
-vmap <Leader>c <Plug>repo = caw:i:toggle
+repo = 'https://github.com/tyru/caw.vim'
+
 # 行末に半角スペースがあると色付けしてくれる
 [[plugins]]
-repo = 'https://github.com/bronson/vim-trailing-whitespace'
+repo = 'bronson/vim-trailing-whitespace'
 
 # ログファイルを色づけしてくれる
 [[plugins]]
@@ -71,7 +79,7 @@ repo = 'vim-scripts/AnsiEsc.vim'
 
 # editorconfigをvimで適応させるやつ
 [[plugins]]
-repo = 'https://github.com/editorconfig/editorconfig-vim'
+repo = 'editorconfig/editorconfig-vim'
 
 # ノーマルモードになったら自動で保存
 [[plugins]]
@@ -80,6 +88,7 @@ repo = 'syui/airsave.vim'
 # ag
 [[plugins]]
 repo = 'rking/ag.vim'
+mac = '~/.cache/dein/repos/github.com/Shougo/vimproc make | mv ~/.cache/dein/repos/github.com/Shougo/vimproc/lib/vimproc_mac.so ~/.cache/dein/.dein/lib'
 
 # erbインデントON
 [[plugins]]
@@ -90,11 +99,7 @@ repo = 'othree/html5.vim'
 repo = 'tomasr/molokai'
 
 # slim syntax
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rcrepo = 
 repo = 'slim-template/vim-slim.git'
 
 # :Switchでキーワード切り替え
-repo =  #AndrewRadev/switch.vim"
-
-syntax on
+repo = 'AndrewRadev/switch.vim'

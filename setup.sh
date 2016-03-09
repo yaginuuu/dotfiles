@@ -11,11 +11,11 @@ rm -rf molokai 2>/dev/null
 
 ln -sf ~/.dotfiles/settingVim/dein.toml ~/.vim/rc/dein.toml
 
-ln -sf ~/.dotfiles/.oh-my-zsh ~/.oh-my-zsh
-ln -sf ~/.dotfiles/.bash_profile ~/.bash_profile
-ln -sf ~/.dotfiles/.tmux.conf ~/.tmux.conf
-ln -sf ~/.dotfiles/.zshrc ~/.zshrc
-ln -sf ~/.dotfiles/.vimrc ~/.vimrc
+ln -sf ~/.dotfiles/.oh-my-zsh ~/
+ln -sf ~/.dotfiles/.bash_profile ~/
+ln -sf ~/.dotfiles/.tmux.conf ~/
+ln -sf ~/.dotfiles/.zshrc ~/
+ln -sf ~/.dotfiles/.vimrc ~/
 
 ln -sf ~/.dotfiles/settingVim/init/based.vim ~/.vim/userautoload/init
 ln -sf ~/.dotfiles/settingVim/init/plugins.vim ~/.vim/userautoload/init
@@ -26,6 +26,8 @@ ln -sf ~/.dotfiles/settingVim/init/template.vim ~/.vim/userautoload/init
 ln -sf ~/.dotfiles/settingVim/plugins/unite.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/settingVim/plugins/surround.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/settingVim/plugins/ag.vim ~/.vim/userautoload/plugins
+ln -sf ~/.dotfiles/settingVim/plugins/caw.vim ~/.vim/userautoload/plugins
+ln -sf ~/.dotfiles/settingVim/plugins/syntastic.vim ~/.vim/userautoload/plugins
 
 ln -sf ~/.dotfiles/git/.gitignore ~/.gitignore
 
