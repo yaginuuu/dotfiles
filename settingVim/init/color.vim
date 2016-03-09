@@ -4,3 +4,6 @@ colorscheme molokai
 syntax on
 " 行番号の色
 highlight LineNr ctermfg=yellow
+
+syntax enable
+filetype plugin indent on

@@ -1,7 +1,13 @@
 mkdir -p ~/.vim/userautoload 2>/dev/null
 mkdir -p ~/.vim/userautoload/init 2>/dev/null
 mkdir -p ~/.vim/userautoload/plugins 2>/dev/null
+
 mkdir -p ~/.vim/rc 2>/dev/null
+mkdir -p ~/.vim/colors 2>/dev/null
+
+git clone https://github.com/tomasr/molokai
+mv molokai/colors/molokai.vim ~/.vim/colors/
+rm -rf molokai 2>/dev/null
 
 ln -sf ~/.dotfiles/settingVim/dein.toml ~/.vim/rc/dein.toml
 
