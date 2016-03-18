@@ -35,9 +35,9 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o>))]]}}
 nnoremap ,i :<C-u>set paste<Return>i
 autocmd InsertLeave * set nopaste
 " マウス操作可能にする
-" set mouse=a
+set mouse=a
 " マウスでドラッグ動作も可能にする
-" set ttymouse=xterm2
+set ttymouse=xterm2
 " クリップボード許可
 " => http://qiita.com/Kumamon/items/3ca4ab80fc465d8eed7e
 " => http://qiita.com/shoma2da/items/92ea8badcd4655b6106c
@@ -52,16 +52,6 @@ endif
 au BufWrite /private/tmp/crontab.* set nowritebackup
 " Don't write backup file if vim is being called by "chpass"
 au BufWrite /private/etc/pw.* set nowritebackup
-"-----------------------------------------------------------------------------"
-" latex関連
-" let tex_flavor='latex'
-" set grepprg=grep\ -nH\ $*
-" set shellslash
-" let g:Tex_DefaultTargetFormat='pdf'
-" let g:Tex_CompileRule_dvi='platex --interaction=nonstopmode $*'
-" let g:Tex_FormatDependency_pdf='dvi,pdf'
-" PDFはPreview.appで開く
-" let g:Tex_ViewRule_pdf='open -a Preview.app
 "-----------------------------------------------------------------------------"
 " Markdown関連
 autocmd BufNewFile,BufRead *.md set filetype=markdown
@@ -118,4 +108,3 @@ map <silent> [Tag]t :tablast <bar> tabf .<CR>
 " 隠しファイルを表示する
 let NERDTreeShowHidden = 1
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-"-----------------------------------------------------------------------------"

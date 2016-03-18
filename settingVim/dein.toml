@@ -1,7 +1,3 @@
-#[dein] Error installing plugins:
-#[dein]   editorconfig-vim
-#[dein]   caw.vim
-#[dein]   vimshell
 # 補完系
 [[plugins]]
 repo = 'Shougo/vimproc'
@@ -59,7 +55,7 @@ depends = 'neomru.vim'
 
 # シングルクオートとダブルクオートの入れ替え等
 [[plugins]]
-repo = 'tpope/vim-surround'
+repo = 'vim-surround'
 
 # ファイルをツリー表示してくれる
 [[plugins]]
