@@ -48,4 +48,3 @@ noremap rj :<C-u>Unite rails/javascript<CR>
 noremap rr :<C-u>Unite rails/route<CR>
 noremap rg :<C-u>Unite rails/gemfile<CR>
 noremap rt :<C-u>Unite rails/spec<CR>
-

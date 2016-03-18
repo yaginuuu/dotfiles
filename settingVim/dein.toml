@@ -1,12 +1,13 @@
 # 補完系
 [[plugins]]
 repo = 'Shougo/vimproc'
-[[plugins]]
-repo = 'Shougo/neocomplcache'
+# TODO: snippet効かない問題
 [[plugins]]
 repo = 'Shougo/neosnippet'
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
 
 # Markdown
 # 編集しているファイルを自動保存するために必要
@@ -54,8 +55,15 @@ repo = 'Shougo/unite.vim'
 depends = 'neomru.vim'
 
 # シングルクオートとダブルクオートの入れ替え等
+# 行全体を囲む => yss'
+# 選択した範囲を囲む => 選択後S'
+# 'を"に変更 => cs'"
+# 削除       => ds
+# 単語を囲む => ysiw
 [[plugins]]
 repo = 'tpope/vim-surround'
+[[plugins]]
+repo = 'surround.vim'
 
 # ファイルをツリー表示してくれる
 [[plugins]]
@@ -84,18 +92,47 @@ repo = 'syui/airsave.vim'
 # ag
 [[plugins]]
 repo = 'rking/ag.vim'
-mac = '~/.cache/dein/repos/github.com/Shougo/vimproc make | mv ~/.cache/dein/repos/github.com/Shougo/vimproc/lib/vimproc_mac.so ~/.cache/dein/.dein/lib'
+[plugins.build]
+mac     = 'make -f make_mac.mak'
 
 # erbインデントON
+# カラースキーマ設定
 [[plugins]]
 repo = 'othree/html5.vim'
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+[[plugins]]
+repo = 'jelera/vim-javascript-syntax'
+
+# htmlの文法チェック
+[[plugins]]
+repo = 'hokaccha/vim-html5validator'
+
+# HTMLファイルを修正して保存したタイミングで, そのHTMLを表示しているブラウザが自動で再読み込みする
+[[plugins]]
+repo = 'tell-k/vim-browsereload-mac'
 
 # color
 [[plugins]]
 repo = 'tomasr/molokai'
 
 # slim syntax
+[[plugins]]
 repo = 'slim-template/vim-slim.git'
 
 # :Switchでキーワード切り替え
+[[plugins]]
 repo = 'AndrewRadev/switch.vim'
+
+# ステータスライン強化
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+# html補完
+# http://qiita.com/muran001/items/9ce24525b3285678acc3
+[[plugins]]
+repo = 'mattn/emmet-vim'
+
+# vimのスタート画面をいい感じにしてくれる
+[[plugins]]
+repo = 'mhinz/vim-startify'
