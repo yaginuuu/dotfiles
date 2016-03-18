@@ -55,7 +55,7 @@ depends = 'neomru.vim'
 
 # シングルクオートとダブルクオートの入れ替え等
 [[plugins]]
-repo = 'vim-surround'
+repo = 'tpope/vim-surround'
 
 # ファイルをツリー表示してくれる
 [[plugins]]
