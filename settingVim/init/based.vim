@@ -108,3 +108,20 @@ map <silent> [Tag]t :tablast <bar> tabf .<CR>
 " 隠しファイルを表示する
 let NERDTreeShowHidden = 1
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+"-----------------------------------------------------------------------------"
+" :makeでPHP構文チェック
+au FileType php setlocal makeprg=php\ -l\ %
+au FileType php setlocal errorformat=%m\ in\ %f\ on\ line\ %l
+" PHPの関数やクラスの折りたたみ(非常に重い）
+let php_folding = 0
+" 文字列の中のSQLをハイライト
+let php_sql_query = 1
+" Baselibメソッドのハイライト
+let php_baselib = 1
+" HTMLもハイライト
+let php_htmlInStrings = 1
+" <? を無効にする→ハイライト除外にする
+let php_noShortTags = 1
+" ] や ) の対応エラーをハイライト
+let php_parent_error_close = 1
+let php_parent_error_open = 1
