@@ -134,5 +134,6 @@ repo = 'itchyny/lightline.vim'
 repo = 'mattn/emmet-vim'
 
 # vimのスタート画面をいい感じにしてくれる
+# なんか日本語表記になってないっぽい
 [[plugins]]
 repo = 'mhinz/vim-startify'
