@@ -26,6 +26,7 @@ ln -sf ~/.dotfiles/settingVim/init/template.vim ~/.vim/userautoload/init
 ln -sf ~/.dotfiles/settingVim/plugins/ag.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/settingVim/plugins/caw.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/settingVim/plugins/neosnippet.vim ~/.vim/userautoload/plugins
+ln -sf ~/.dotfiles/settingVim/plugins/switch.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/settingVim/plugins/surround.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/settingVim/plugins/unite.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/settingVim/plugins/syntastic.vim ~/.vim/userautoload/plugins

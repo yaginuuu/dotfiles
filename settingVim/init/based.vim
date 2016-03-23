@@ -109,6 +109,7 @@ map <silent> [Tag]t :tablast <bar> tabf .<CR>
 let NERDTreeShowHidden = 1
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 "-----------------------------------------------------------------------------"
+" PHP用
 " :makeでPHP構文チェック
 au FileType php setlocal makeprg=php\ -l\ %
 au FileType php setlocal errorformat=%m\ in\ %f\ on\ line\ %l
