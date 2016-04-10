@@ -114,7 +114,7 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 au FileType php setlocal makeprg=php\ -l\ %
 au FileType php setlocal errorformat=%m\ in\ %f\ on\ line\ %l
 " PHPの関数やクラスの折りたたみ(非常に重い）
-let php_folding = 0
+" let php_folding = 0
 " 文字列の中のSQLをハイライト
 let php_sql_query = 1
 " Baselibメソッドのハイライト

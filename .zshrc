@@ -25,6 +25,6 @@ export MANPATH=/opt/local/man:$MANPATH
 # oh-my-zsh
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="amuse"
-source $ZSH/oh-my-zsh.sh
 # update無効
 export DISABLE_AUTO_UPDATE="true"
+source $ZSH/oh-my-zsh.sh

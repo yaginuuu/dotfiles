@@ -28,8 +28,6 @@ endif
 " 設定終了
 call dein#end()
 
-syntax on
-
 " もし、未インストールものものがあったらインストール
 if dein#check_install()
   call dein#install()

@@ -3,7 +3,7 @@ colorscheme molokai
 " 構文毎に文字色を変化させる
 syntax on
 " 行番号の色
-highlight LineNr ctermfg=yellow
+autocmd ColorScheme * highlight LineNr ctermfg=226
 
 syntax enable
 filetype plugin indent on
