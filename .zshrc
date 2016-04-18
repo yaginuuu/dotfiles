@@ -28,3 +28,28 @@ ZSH_THEME="amuse"
 # update無効
 export DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
+
+# 補完機能の強化
+autoload -U compinit
+# 入力しているコマンド名が間違っている場合にもしかして：を出す。
+setopt correct
+# ビープを鳴らさない
+setopt nobeep
+# 色を使う
+setopt prompt_subst
+# ^Dでログアウトしない。
+setopt ignoreeof
+# バックグラウンドジョブが終了したらすぐに知らせる。
+setopt no_tify
+# 直前と同じコマンドをヒストリに追加しない
+setopt hist_ignore_dups
+# 補完
+# タブによるファイルの順番切り替えをしない
+# unsetopt auto_menu
+# alias grep="grep --color -n -I --exclude='*.svn-*' --exclude='entries' --exclude='*/cache/*'"
+# vim
+alias vi="vim"
+# tree
+alias tree="tree -NC" # N: 文字化け対策, C:色をつける
+# cdしたあとで、自動的に ls する
+function chpwd() { ls -1 }
