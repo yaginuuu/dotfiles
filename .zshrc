@@ -7,7 +7,7 @@ export PATH=$PATH:/usr/local/mysql/bin
 # Heroku
 export PATH="/usr/local/heroku/bin:$PATH"
 
-#sshで接続した先で日本語が使えるようにする
+# sshで接続した先で日本語が使えるようにする
 export TERM=xterm-256color
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8

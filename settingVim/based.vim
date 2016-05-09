@@ -30,7 +30,7 @@ set hlsearch
 " 自動的に閉じカッコを入力してインデント
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
-inoremap (<Enter> ()<Left><CR><ESC><S-o>))]]}}
+inoremap (<Enter> ()<Left><CR><ESC><S-o>)]}
 " pasteモード(,iでもペーストモードへ. ノーマルに戻るとインサートに戻す)
 nnoremap ,i :<C-u>set paste<Return>i
 autocmd InsertLeave * set nopaste
@@ -54,7 +54,6 @@ au BufWrite /private/tmp/crontab.* set nowritebackup
 au BufWrite /private/etc/pw.* set nowritebackup
 "-----------------------------------------------------------------------------"
 " Markdown関連
-" Markdown Preview
 let g:previm_open_cmd = ''
 " <F7>でプレビュー
 nnoremap <silent> <F7> :PrevimOpen<CR>

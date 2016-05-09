@@ -13,6 +13,13 @@ depends = ['neosnippet-snippets']
 on_i = 1
 on_ft = ['snippet']
 
+# 補完
+# luaをインスコしているのが前提
+# http://cpp0302.hatenablog.com/entry/2015/04/10/033609
+# http://qiita.com/hide/items/229ff9460e75426a2d07
+# <TAB> 補完候補の選択
+# C-g   補完した文字を消す
+# C-l   補完候補の中から, 共通する部分を補完
 [[plugins]]
 repo = 'Shougo/neocomplete'
 if = 'has("lua")'
@@ -53,8 +60,6 @@ repo = 'basyura/unite-rails.git'
 repo = 'thinca/vim-quickrun'
 [[plugins]]
 repo = 'altercation/vim-colors-solarized'
-[[plugins]]
-repo = 'Shougo/vimshell'
 
 # ファイルオープンを便利にする
 [[plugins]]
