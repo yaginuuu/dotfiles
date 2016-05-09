@@ -1,13 +1,22 @@
-# 補完系
 [[plugins]]
-repo = 'Shougo/vimproc'
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+# 補完系
 # TODO: snippet効かない問題
 [[plugins]]
-repo = 'Shougo/neosnippet'
-[[plugins]]
 repo = 'Shougo/neosnippet-snippets'
+
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
+repo = 'Shougo/neosnippet'
+depends = ['neosnippet-snippets']
+on_i = 1
+on_ft = ['snippet']
+
+[[plugins]]
+repo = 'Shougo/neocomplete'
+if = 'has("lua")'
+on_i = 1
 
 # Markdown
 # 編集しているファイルを自動保存するために必要

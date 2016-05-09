@@ -28,6 +28,11 @@ endif
 " 設定終了
 call dein#end()
 
+" vimprocだけは最初にインストールしてほしい
+if dein#check_install(['vimproc'])
+  call dein#install(['vimproc'])
+endif
+
 " もし、未インストールものものがあったらインストール
 if dein#check_install()
   call dein#install()
