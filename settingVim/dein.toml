@@ -130,6 +130,7 @@ repo = 'itchyny/lightline.vim'
 
 # html補完
 # http://qiita.com/muran001/items/9ce24525b3285678acc3
+# Emmet式<C-y>, で展開できる
 [[plugins]]
 repo = 'mattn/emmet-vim'
 
