@@ -32,6 +32,7 @@ ln -sf ~/.dotfiles/settingVim/plugins/surround.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/settingVim/plugins/unite.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/settingVim/plugins/syntastic.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/settingVim/plugins/vim-startify.vim ~/.vim/userautoload/plugins
+ln -sf ~/.dotfiles/settingVim/plugins/vim-precious.vim ~/.vim/userautoload/plugins
 
 ln -sf ~/.dotfiles/git/.gitignore ~/.gitignore
 

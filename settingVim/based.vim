@@ -54,12 +54,15 @@ au BufWrite /private/tmp/crontab.* set nowritebackup
 au BufWrite /private/etc/pw.* set nowritebackup
 "-----------------------------------------------------------------------------"
 " Markdown関連
-autocmd BufNewFile,BufRead *.md set filetype=markdown
-autocmd BufNewFile,BufRead *.txt set filetype=markdown
 " Markdown Preview
 let g:previm_open_cmd = ''
 " <F7>でプレビュー
 nnoremap <silent> <F7> :PrevimOpen<CR>
+"-----------------------------------------------------------------------------"
+" ファイルタイプ指定
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+autocmd BufNewFile,BufRead *.txt set filetype=markdown
+autocmd BufNewFile,BufRead *.php set filetype=html
 "-----------------------------------------------------------------------------"
 " タブ関連
 " nywhere SID.
