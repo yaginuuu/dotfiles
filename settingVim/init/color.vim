@@ -8,10 +8,10 @@ syntax on
 " 横方向カーソルを強調
 set cursorline
 hi CursorLineNr ctermfg=226
-hi clear CursorLine
+" hi clear CursorLine
 
 " 縦方向カーソルを強調
-set cursorcolumn
+" set cursorcolumn
 
 syntax enable
 filetype plugin indent on

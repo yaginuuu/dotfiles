@@ -129,3 +129,8 @@ let php_noShortTags = 1
 " ] や ) の対応エラーをハイライト
 let php_parent_error_close = 1
 let php_parent_error_open = 1
+
+" viminfo-fileに保存される内容
+set viminfo='20,<50,s10,h,ra:,rb:,%
+" viminfoを作成する場所
+set viminfo+=n$VIM/.viminfo
