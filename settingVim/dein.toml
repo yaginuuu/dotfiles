@@ -158,3 +158,7 @@ repo = 'mhinz/vim-startify'
 repo = 'osyo-manga/vim-precious'
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
+
+# マルチカーソル
+[[plugins]]
+repo = 'terryma/vim-multiple-cursors'
