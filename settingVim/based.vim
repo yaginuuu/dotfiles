@@ -62,10 +62,9 @@ nnoremap <silent> <F7> :PrevimOpen<CR>
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.txt set filetype=markdown
 " テンプレートファイルを使用しない場合のインデントを調節するため
-autocmd BufNewFile,BufRead *.php set filetype=html
+" autocmd BufNewFile,BufRead *.php set filetype=html
 "-----------------------------------------------------------------------------"
 " タブ関連
-" nywhere SID.
 function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
 endfunction
@@ -91,7 +90,6 @@ endfunction
 let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
 " 常にタブラインを表示
 set showtabline=2
-" The prefix key.
 nnoremap    [Tag]   <Nop>
 nmap    t [Tag]
 " t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ
@@ -116,21 +114,16 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 " :makeでPHP構文チェック
 au FileType php setlocal makeprg=php\ -l\ %
 au FileType php setlocal errorformat=%m\ in\ %f\ on\ line\ %l
-" PHPの関数やクラスの折りたたみ(非常に重い）
-" let php_folding = 0
 " 文字列の中のSQLをハイライト
 let php_sql_query = 1
-" Baselibメソッドのハイライト
-let php_baselib = 1
 " HTMLもハイライト
 let php_htmlInStrings = 1
-" <? を無効にする→ハイライト除外にする
+" <? を無効にする→ ハイライト除外にする
 let php_noShortTags = 1
-" ] や ) の対応エラーをハイライト
-let php_parent_error_close = 1
-let php_parent_error_open = 1
 
 " viminfo-fileに保存される内容
 set viminfo='20,<50,s10,h,ra:,rb:,%
 " viminfoを作成する場所
 set viminfo+=n$VIM/.viminfo
+" クリップボードを許可しない
+" set clipboard=exclude:.*

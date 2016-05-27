@@ -15,10 +15,14 @@ export LC_ALL=en_US.UTF-8
 # エディタ設定
 export EDITOR=/usr/local/bin/vim
 
+# ページャ設定
 export PAGER=/usr/local/bin/vimpager
 export MANPAGER=/usr/local/bin/vimpager
 
 # MacPorts
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:${PATH}
+export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}
+
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 export MANPATH=/opt/local/man:$MANPATH
 
@@ -43,13 +47,11 @@ setopt ignoreeof
 setopt no_tify
 # 直前と同じコマンドをヒストリに追加しない
 setopt hist_ignore_dups
-# 補完
-# タブによるファイルの順番切り替えをしない
-# unsetopt auto_menu
-# alias grep="grep --color -n -I --exclude='*.svn-*' --exclude='entries' --exclude='*/cache/*'"
-# vim
+
 alias vi="vim"
-# tree
-alias tree="tree -NC" # N: 文字化け対策, C:色をつける
+# tree N: 文字化け対策, C:色をつける
+alias tree="tree -NC"
+alias sed="gsed"
+alias awk="gawk"
 # cdしたあとで、自動的に ls する
 function chpwd() { ls -1 }

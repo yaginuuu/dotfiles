@@ -1,12 +1,11 @@
+# 非同期処理
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
-# 補完系
-# TODO: snippet効かない問題
+# 補完系辞書
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
-
 [[plugins]]
 repo = 'Shougo/neosnippet'
 depends = ['neosnippet-snippets']
@@ -32,9 +31,9 @@ repo = 'vim-scripts/vim-auto-save'
 # Vim で編集した Markdownファイルをブラウザプレビューするために必要repo = 自動リロード機能付き
 [[plugins]]
 repo = 'kannokanno/previm'
-# 連続スクロールを実現するために必要
-[[plugins]]
-repo = 'kana/vim-submode'
+# # 連続スクロールを実現するために必要
+# [[plugins]]
+# repo = 'kana/vim-submode'
 # ブラウザでプレビューするために必要
 [[plugins]]
 repo = 'tyru/open-browser.vim'
@@ -50,8 +49,8 @@ repo = 'tpope/vim-endwise'
 [[plugins]]
 repo = 'matchit.zip'
 # コーディングルールチェック
-[[plugins]]
-repo = 'scrooloose/syntastic'
+# [[plugins]]
+# repo = 'scrooloose/syntastic'
 # Rails版unite
 [[plugins]]
 repo = 'basyura/unite-rails.git'
@@ -64,6 +63,8 @@ repo = 'altercation/vim-colors-solarized'
 # ファイルオープンを便利にする
 [[plugins]]
 repo = 'Shougo/neomru.vim'
+
+# 検索
 [[plugins]]
 repo = 'Shougo/unite.vim'
 depends = 'neomru.vim'
@@ -76,8 +77,6 @@ depends = 'neomru.vim'
 # 単語を囲む => ysiw
 [[plugins]]
 repo = 'tpope/vim-surround'
-[[plugins]]
-repo = 'surround.vim'
 
 # ファイルをツリー表示してくれる
 [[plugins]]
@@ -119,8 +118,8 @@ repo = 'hail2u/vim-css3-syntax'
 repo = 'jelera/vim-javascript-syntax'
 
 # htmlの文法チェック
-[[plugins]]
-repo = 'hokaccha/vim-html5validator'
+# [[plugins]]
+# repo = 'hokaccha/vim-html5validator'
 
 # HTMLファイルを修正して保存したタイミングで, そのHTMLを表示しているブラウザが自動で再読み込みする
 [[plugins]]
@@ -131,12 +130,12 @@ repo = 'tell-k/vim-browsereload-mac'
 repo = 'tomasr/molokai'
 
 # slim syntax
-[[plugins]]
-repo = 'slim-template/vim-slim.git'
+# [[plugins]]
+# repo = 'slim-template/vim-slim.git'
 
 # :Switchでキーワード切り替え
-[[plugins]]
-repo = 'AndrewRadev/switch.vim'
+# [[plugins]]
+# repo = 'AndrewRadev/switch.vim'
 
 # ステータスライン強化
 [[plugins]]
@@ -154,10 +153,10 @@ repo = 'mattn/emmet-vim'
 repo = 'mhinz/vim-startify'
 
 # コンテキストに応じて, ファイルタイプを変更できる
-[[plugins]]
-repo = 'osyo-manga/vim-precious'
-[[plugins]]
-repo = 'Shougo/context_filetype.vim'
+# [[plugins]]
+# repo = 'osyo-manga/vim-precious'
+# [[plugins]]
+# repo = 'Shougo/context_filetype.vim'
 
 # マルチカーソル
 [[plugins]]

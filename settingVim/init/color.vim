@@ -6,12 +6,12 @@ syntax on
 " autocmd ColorScheme * highlight LineNr ctermfg=226
 
 " 横方向カーソルを強調
-set cursorline
+" set cursorline
 hi CursorLineNr ctermfg=226
 " hi clear CursorLine
 
 " 縦方向カーソルを強調
 " set cursorcolumn
 
-syntax enable
-filetype plugin indent on
+" syntax enable
+" filetype plugin indent on
