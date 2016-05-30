@@ -59,7 +59,7 @@ let g:previm_open_cmd = ''
 nnoremap <silent> <F7> :PrevimOpen<CR>
 "-----------------------------------------------------------------------------"
 " ファイルタイプ指定
-autocmd BufNewFile,BufRead *.md set filetype=markdown
+autocmd BufNewFile,BufRead *.md  set filetype=markdown
 autocmd BufNewFile,BufRead *.txt set filetype=markdown
 " テンプレートファイルを使用しない場合のインデントを調節するため
 " autocmd BufNewFile,BufRead *.php set filetype=html
