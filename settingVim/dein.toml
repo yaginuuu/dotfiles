@@ -1,7 +1,9 @@
 # 非同期処理
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
+[plugins.build]
 build = 'make'
+
 
 # 補完系辞書
 [[plugins]]
@@ -105,8 +107,6 @@ repo = 'syui/airsave.vim'
 # ag
 [[plugins]]
 repo = 'rking/ag.vim'
-[plugins.build]
-mac     = 'make -f make_mac.mak'
 
 # erbインデントON
 # カラースキーマ設定

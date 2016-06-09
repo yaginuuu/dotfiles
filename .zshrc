@@ -33,6 +33,11 @@ ZSH_THEME="amuse"
 export DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 
+# TODO: oh-my-zshからの脱却
+# autoload -Uz colors
+# colors
+# PROMPT="%{${fg[yellow]}%}$%{${reset_color}%} "
+
 # 補完機能の強化
 autoload -U compinit
 # 入力しているコマンド名が間違っている場合にもしかして：を出す。
