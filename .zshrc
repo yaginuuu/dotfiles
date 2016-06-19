@@ -77,7 +77,6 @@ setopt hist_ignore_dups
 function chpwd() { ls -1 }
 
 # エイリアス
-alias vi="vim"
 # tree N: 文字化け対策, C:色をつける
 alias tree="tree -NC"
 alias sed="gsed"
