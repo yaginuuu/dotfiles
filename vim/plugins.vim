@@ -1,9 +1,9 @@
-" プラグインが実際にインストールされるディレクトリ
+" プラグインが実際にインストールされるディレクトリを指定
 let s:dein_dir = expand('~/.cache/dein')
 " dein.vim 本体
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
-" dein.vim がなければ github から落としてくる
+" dein.vimがなければgithubからインスコ
 if &runtimepath !~# '/dein.vim'
   if !isdirectory(s:dein_repo_dir)
     execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
@@ -11,11 +11,11 @@ if &runtimepath !~# '/dein.vim'
   execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
 
-" プラグインリストを収めた TOML ファイル
+" プラグインリストを収めたtomlファイル
 let s:toml      = '~/.vim/rc/dein.toml'
 " let s:lazy_toml = '~/.vim/rc/dein_lazy.toml'
 
-" TOML を読み込み、キャッシュしておく
+" tomlを読み込み, キャッシュ
 if dein#load_state(s:dein_dir)
   " 設定開始
   call dein#begin(s:dein_dir)
@@ -24,7 +24,7 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
-" もし、未インストールものものがあったらインストール
+" もし, 未インストールのプラグインが存在したらインストールを実施
 if dein#check_install()
   call dein#install()
 endif

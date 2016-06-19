@@ -47,13 +47,34 @@ if !exists('loaded_matchit')
   " matchitを有効化
   runtime macros/matchit.vim
 endif
+" PHP用
+" :makeでPHP構文チェック
+au FileType php setlocal makeprg=php\ -l\ %
+au FileType php setlocal errorformat=%m\ in\ %f\ on\ line\ %l
+" 文字列の中のSQLをハイライト
+let php_sql_query = 1
+" HTMLもハイライト
+let php_htmlInStrings = 1
+" <? を無効にする→ ハイライト除外にする
+let php_noShortTags = 1
+
+" viminfo-fileに保存される内容
+set viminfo='20,<50,s10,h,ra:,rb:,%
+" viminfoを作成する場所
+set viminfo+=n$VIM/.viminfo
+" クリップボードを許可しない
+" set clipboard=exclude:.*
+" ダブルクォーテーション表示
+set conceallevel=0
+" jsonファイルのダブルクォーテーション表示
+let g:vim_json_syntax_conceal = 0
 "-----------------------------------------------------------------------------"
-" Don't write backup file if vim is being called by "crontab -e"
+" crontab -eのバッグアップをとらない
 au BufWrite /private/tmp/crontab.* set nowritebackup
-" Don't write backup file if vim is being called by "chpass"
+" chpassのバッグアップをとらない
 au BufWrite /private/etc/pw.* set nowritebackup
 "-----------------------------------------------------------------------------"
-" Markdown関連
+" Markdown系
 let g:previm_open_cmd = ''
 " <F7>でプレビュー
 nnoremap <silent> <F7> :PrevimOpen<CR>
@@ -64,7 +85,7 @@ autocmd BufNewFile,BufRead *.txt set filetype=markdown
 " テンプレートファイルを使用しない場合のインデントを調節するため
 " autocmd BufNewFile,BufRead *.php set filetype=html
 "-----------------------------------------------------------------------------"
-" タブ関連
+" タブ系
 function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
 endfunction
@@ -105,7 +126,7 @@ map <silent> [Tag]p :tabprevious<CR>
 " tt 一番右に新規タブを開いてツリーで表示
 map <silent> [Tag]t :tablast <bar> tabf .<CR>
 "-----------------------------------------------------------------------------"
-" NERDTree関連
+" NERDTree系
 " 隠しファイルを表示する
 let NERDTreeShowHidden = 1
 " nnoremap <silent><C-e> :NERDTreeToggle<CR>
@@ -114,24 +135,3 @@ autocmd VimEnter * execute 'NERDTree'
 "他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "-----------------------------------------------------------------------------"
-" PHP用
-" :makeでPHP構文チェック
-au FileType php setlocal makeprg=php\ -l\ %
-au FileType php setlocal errorformat=%m\ in\ %f\ on\ line\ %l
-" 文字列の中のSQLをハイライト
-let php_sql_query = 1
-" HTMLもハイライト
-let php_htmlInStrings = 1
-" <? を無効にする→ ハイライト除外にする
-let php_noShortTags = 1
-
-" viminfo-fileに保存される内容
-set viminfo='20,<50,s10,h,ra:,rb:,%
-" viminfoを作成する場所
-set viminfo+=n$VIM/.viminfo
-" クリップボードを許可しない
-" set clipboard=exclude:.*
-" ダブルクォーテーション表示
-set conceallevel=0
-" jsonファイルのダブルクォーテーション表示
-let g:vim_json_syntax_conceal = 0

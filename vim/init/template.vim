@@ -8,7 +8,7 @@ augroup MD
   autocmd BufNewFile *.md 0r $HOME/.dotfiles/settingVim/templates/template.md
 augroup END
 
-augroup MD
+augroup PHP
   autocmd!
   autocmd BufNewFile *.php 0r $HOME/.dotfiles/settingVim/templates/template.php
 augroup END

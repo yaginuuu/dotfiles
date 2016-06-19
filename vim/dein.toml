@@ -1,3 +1,4 @@
+# lib = 32
 # 非同期処理
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
@@ -15,6 +16,7 @@ hook_post_update = '''
 '''
 
 # 補完系辞書
+# TODO: 自作スニペットを作成したい
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 [[plugins]]
@@ -39,17 +41,14 @@ on_i = 1
 # 編集しているファイルを自動保存するために必要
 [[plugins]]
 repo = 'vim-scripts/vim-auto-save'
-# Vim で編集した Markdownファイルをブラウザプレビューするために必要repo = 自動リロード機能付き
+# Vimで編集したMarkdownファイルをブラウザプレビューするために必要
 [[plugins]]
 repo = 'kannokanno/previm'
-# # 連続スクロールを実現するために必要
-# [[plugins]]
-# repo = 'kana/vim-submode'
 # ブラウザでプレビューするために必要
 [[plugins]]
 repo = 'tyru/open-browser.vim'
 
-# ruby & rails
+# Ruby&Rails
 # gfで移動, 元に戻るにはC-o, :A, :R
 [[plugins]]
 repo = 'tpope/vim-rails'
@@ -59,9 +58,6 @@ repo = 'tpope/vim-endwise'
 #「%」コマンドの強化, 対応するタグ移動
 [[plugins]]
 repo = 'matchit.zip'
-# コーディングルールチェック
-# [[plugins]]
-# repo = 'scrooloose/syntastic'
 # Rails版unite
 [[plugins]]
 repo = 'basyura/unite-rails.git'
@@ -81,11 +77,11 @@ repo = 'Shougo/unite.vim'
 depends = 'neomru.vim'
 
 # シングルクオートとダブルクオートの入れ替え等
-# 'を"に変更 => cs'"
-# 行全体を囲む => yss'
-# 選択した範囲を囲む => 選択後S'
-# 削除       => ds
-# 単語を囲む => ysiw
+# 'を"に変更        : cs'"
+# 行全体を囲む      : yss'
+# 選択した範囲を囲む: 選択後S'
+# 削除              : ds
+# 単語を囲む        : ysiw
 [[plugins]]
 repo = 'tpope/vim-surround'
 
@@ -126,10 +122,6 @@ repo = 'hail2u/vim-css3-syntax'
 [[plugins]]
 repo = 'jelera/vim-javascript-syntax'
 
-# htmlの文法チェック
-# [[plugins]]
-# repo = 'hokaccha/vim-html5validator'
-
 # HTMLファイルを修正して保存したタイミングで, そのHTMLを表示しているブラウザが自動で再読み込みする
 [[plugins]]
 repo = 'tell-k/vim-browsereload-mac'
@@ -138,17 +130,17 @@ repo = 'tell-k/vim-browsereload-mac'
 [[plugins]]
 repo = 'tomasr/molokai'
 
-# slim syntax
-# [[plugins]]
-# repo = 'slim-template/vim-slim.git'
-
-# :Switchでキーワード切り替え
-# [[plugins]]
-# repo = 'AndrewRadev/switch.vim'
-
 # ステータスライン強化
 [[plugins]]
 repo = 'itchyny/lightline.vim'
+
+# マルチカーソル
+[[plugins]]
+repo = 'terryma/vim-multiple-cursors'
+
+# jsonファイルのダブルクォーテーションを表示する
+[[plugins]]
+repo = 'elzr/vim-json'
 
 # html補完
 # http://qiita.com/muran001/items/9ce24525b3285678acc3
@@ -156,6 +148,7 @@ repo = 'itchyny/lightline.vim'
 [[plugins]]
 repo = 'mattn/emmet-vim'
 
+# ------------------------------------------------------
 # vimのスタート画面をいい感じにしてくれる
 # なんか日本語表記になってないっぽい
 # [[plugins]]
@@ -166,10 +159,21 @@ repo = 'mattn/emmet-vim'
 # repo = 'osyo-manga/vim-precious'
 # [[plugins]]
 # repo = 'Shougo/context_filetype.vim'
+# htmlの文法チェック
+# [[plugins]]
+# repo = 'hokaccha/vim-html5validator'
+# :Switchでキーワード切り替え
+# [[plugins]]
+# repo = 'AndrewRadev/switch.vim'
 
-# マルチカーソル
-[[plugins]]
-repo = 'terryma/vim-multiple-cursors'
+# # 連続スクロールを実現するために必要
+# [[plugins]]
+# repo = 'kana/vim-submode'
 
-# jsonファイルのダブルクォーテーションを表示する
-repo = 'elzr/vim-json'
+# slim syntax
+# [[plugins]]
+# repo = 'slim-template/vim-slim.git'
+
+# コーディングルールチェック
+# # [[plugins]]
+# # repo = 'scrooloose/syntastic'

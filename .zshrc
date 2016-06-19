@@ -87,9 +87,11 @@ alias desctop="cd ~/Desktop; vim"
 alias vi='(){
 if [ $# = 0 ]; then
     vim
+elif [ $1 = '.' ]; then
+    vim
 elif [ -e $1 ]; then
-    cd $1; vim
+    cd $1; vim $1
 else
-    vim $1
+    vim
 fi
 }'

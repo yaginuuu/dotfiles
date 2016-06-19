@@ -1,6 +1,9 @@
-set autoindent   " 自動でインデント
-set smartindent  " 新しい行を開始したときに、新しい行のインデントを現在行と同じ量にする。
-set cindent      " Cプログラムファイルの自動インデントを始める
+" 自動でインデント
+set autoindent
+" 新しい行を開始したときに, 新しい行のインデントを現在行と同じ量にする
+set smartindent
+" Cプログラムファイルの自動インデントを始める
+set cindent
 
 if has("autocmd")
     filetype plugin on
@@ -29,6 +32,7 @@ if has("autocmd")
     autocmd FileType wsh        setlocal sw=4 sts=4 ts=4 et
     autocmd FileType xhtml      setlocal sw=4 sts=4 ts=4 et
     autocmd FileType xml        setlocal sw=4 sts=4 ts=4 et
+    autocmd FileType json       setlocal sw=4 sts=4 ts=4 et
     autocmd FileType yaml       setlocal sw=2 sts=2 ts=2 et
     autocmd FileType zsh        setlocal sw=4 sts=4 ts=4 et
     autocmd FileType scala      setlocal sw=2 sts=2 ts=2 et
