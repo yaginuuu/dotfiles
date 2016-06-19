@@ -81,7 +81,7 @@ function chpwd() { ls -1 }
 alias tree="tree -NC"
 alias sed="gsed"
 alias awk="gawk"
-alias tmux kill-server="kill_tmux"
+alias kill_tmux="tmux kill-server"
 alias dotfiles="cd ~/.dotfiles; vim"
 alias desctop="cd ~/Desktop; vim"
 alias vi='(){
