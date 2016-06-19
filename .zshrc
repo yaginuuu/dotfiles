@@ -84,6 +84,7 @@ alias awk="gawk"
 alias kill_tmux="tmux kill-server"
 alias dotfiles="cd ~/.dotfiles; vim"
 alias desctop="cd ~/Desktop; vim"
+# FIXME: 補完でターゲットが2重に出現してしまう問題
 alias vi='(){
 if [ $# = 0 ]; then
     vim

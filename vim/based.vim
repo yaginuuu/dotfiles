@@ -64,10 +64,6 @@ set viminfo='20,<50,s10,h,ra:,rb:,%
 set viminfo+=n$VIM/.viminfo
 " クリップボードを許可しない
 " set clipboard=exclude:.*
-" ダブルクォーテーション表示
-set conceallevel=0
-" jsonファイルのダブルクォーテーション表示
-let g:vim_json_syntax_conceal = 0
 "-----------------------------------------------------------------------------"
 " crontab -eのバッグアップをとらない
 au BufWrite /private/tmp/crontab.* set nowritebackup
@@ -135,3 +131,7 @@ autocmd VimEnter * execute 'NERDTree'
 "他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "-----------------------------------------------------------------------------"
+" ダブルクォーテーション表示
+set conceallevel=0
+" jsonファイルのダブルクォーテーション表示
+let g:vim_json_syntax_conceal = 0
