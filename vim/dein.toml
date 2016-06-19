@@ -149,8 +149,8 @@ repo = 'mattn/emmet-vim'
 
 # vimのスタート画面をいい感じにしてくれる
 # なんか日本語表記になってないっぽい
-[[plugins]]
-repo = 'mhinz/vim-startify'
+# [[plugins]]
+# repo = 'mhinz/vim-startify'
 
 # コンテキストに応じて, ファイルタイプを変更できる
 # [[plugins]]
@@ -161,3 +161,6 @@ repo = 'mhinz/vim-startify'
 # マルチカーソル
 [[plugins]]
 repo = 'terryma/vim-multiple-cursors'
+
+# jsonファイルのダブルクォーテーションを表示する
+repo = 'elzr/vim-json'

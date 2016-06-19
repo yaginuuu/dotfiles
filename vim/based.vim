@@ -108,7 +108,11 @@ map <silent> [Tag]t :tablast <bar> tabf .<CR>
 " NERDTree関連
 " 隠しファイルを表示する
 let NERDTreeShowHidden = 1
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+" nnoremap <silent><C-e> :NERDTreeToggle<CR>
+" デフォルトでツリーを表示させる
+autocmd VimEnter * execute 'NERDTree'
+"他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "-----------------------------------------------------------------------------"
 " PHP用
 " :makeでPHP構文チェック
@@ -127,3 +131,7 @@ set viminfo='20,<50,s10,h,ra:,rb:,%
 set viminfo+=n$VIM/.viminfo
 " クリップボードを許可しない
 " set clipboard=exclude:.*
+" ダブルクォーテーション表示
+set conceallevel=0
+" jsonファイルのダブルクォーテーション表示
+let g:vim_json_syntax_conceal = 0

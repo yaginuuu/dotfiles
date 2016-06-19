@@ -30,8 +30,5 @@ alias lsa='ls -lah'
 alias ls='ls -a'
 alias ll='ls -lh'
 alias la='ls -lAh'
-# alias sl=ls
 
 alias afind='ack-grep -il'
-
-alias tmux kill-server="kill_tmux"

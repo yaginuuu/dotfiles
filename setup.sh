@@ -9,7 +9,7 @@ git clone https://github.com/tomasr/molokai
 mv molokai/colors/molokai.vim ~/.vim/colors/
 rm -rf molokai 2>/dev/null
 
-ln -sf ~/.dotfiles/settingVim/dein.toml ~/.vim/rc/dein.toml
+ln -sf ~/.dotfiles/vim/dein.toml ~/.vim/rc/dein.toml
 
 ln -sf ~/.dotfiles/.oh-my-zsh ~/
 ln -sf ~/.dotfiles/.bash_profile ~/
@@ -17,24 +17,24 @@ ln -sf ~/.dotfiles/.tmux.conf ~/
 ln -sf ~/.dotfiles/.zshrc ~/
 ln -sf ~/.dotfiles/.vimrc ~/
 
-ln -sf ~/.dotfiles/settingVim/based.vim ~/.vim/userautoload
-ln -sf ~/.dotfiles/settingVim/plugins.vim ~/.vim/userautoload
+ln -sf ~/.dotfiles/vim/based.vim ~/.vim/userautoload
+ln -sf ~/.dotfiles/vim/plugins.vim ~/.vim/userautoload
 
-ln -sf ~/.dotfiles/settingVim/init/indent.vim ~/.vim/userautoload/init
-ln -sf ~/.dotfiles/settingVim/init/color.vim ~/.vim/userautoload/init
-ln -sf ~/.dotfiles/settingVim/init/template.vim ~/.vim/userautoload/init
+ln -sf ~/.dotfiles/vim/init/indent.vim ~/.vim/userautoload/init
+ln -sf ~/.dotfiles/vim/init/color.vim ~/.vim/userautoload/init
+ln -sf ~/.dotfiles/vim/init/template.vim ~/.vim/userautoload/init
 
-ln -sf ~/.dotfiles/settingVim/plugins/ag.vim ~/.vim/userautoload/plugins
-ln -sf ~/.dotfiles/settingVim/plugins/caw.vim ~/.vim/userautoload/plugins
-ln -sf ~/.dotfiles/settingVim/plugins/neosnippet.vim ~/.vim/userautoload/plugins
-# ln -sf ~/.dotfiles/settingVim/plugins/switch.vim ~/.vim/userautoload/plugins
-ln -sf ~/.dotfiles/settingVim/plugins/surround.vim ~/.vim/userautoload/plugins
-ln -sf ~/.dotfiles/settingVim/plugins/unite.vim ~/.vim/userautoload/plugins
-ln -sf ~/.dotfiles/settingVim/plugins/syntastic.vim ~/.vim/userautoload/plugins
-ln -sf ~/.dotfiles/settingVim/plugins/vim-startify.vim ~/.vim/userautoload/plugins
-# ln -sf ~/.dotfiles/settingVim/plugins/vim-precious.vim ~/.vim/userautoload/plugins
-ln -sf ~/.dotfiles/settingVim/plugins/emmet.vim ~/.vim/userautoload/plugins
-ln -sf ~/.dotfiles/settingVim/plugins/neocomplete.vim ~/.vim/userautoload/plugins
+ln -sf ~/.dotfiles/vim/plugins/ag.vim ~/.vim/userautoload/plugins
+ln -sf ~/.dotfiles/vim/plugins/caw.vim ~/.vim/userautoload/plugins
+ln -sf ~/.dotfiles/vim/plugins/neosnippet.vim ~/.vim/userautoload/plugins
+ln -sf ~/.dotfiles/vim/plugins/switch.vim ~/.vim/userautoload/plugins
+ln -sf ~/.dotfiles/vim/plugins/surround.vim ~/.vim/userautoload/plugins
+ln -sf ~/.dotfiles/vim/plugins/unite.vim ~/.vim/userautoload/plugins
+ln -sf ~/.dotfiles/vim/plugins/syntastic.vim ~/.vim/userautoload/plugins
+ln -sf ~/.dotfiles/vim/plugins/vim-startify.vim ~/.vim/userautoload/plugins
+ln -sf ~/.dotfiles/vim/plugins/vim-precious.vim ~/.vim/userautoload/plugins
+ln -sf ~/.dotfiles/vim/plugins/emmet.vim ~/.vim/userautoload/plugins
+ln -sf ~/.dotfiles/vim/plugins/neocomplete.vim ~/.vim/userautoload/plugins
 
 ln -sf ~/.dotfiles/git/.gitignore ~/.gitignore
 

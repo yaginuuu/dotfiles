@@ -33,34 +33,6 @@ ZSH_THEME="amuse"
 export DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 
-# TODO: oh-my-zshからの脱却
-# autoload -Uz colors
-# colors
-# PROMPT="%{${fg[yellow]}%}$%{${reset_color}%} "
-
-# 補完機能の強化
-autoload -U compinit
-# 入力しているコマンド名が間違っている場合にもしかして：を出す。
-setopt correct
-# ビープを鳴らさない
-setopt nobeep
-# 色を使う
-setopt prompt_subst
-# ^Dでログアウトしない。
-setopt ignoreeof
-# バックグラウンドジョブが終了したらすぐに知らせる。
-setopt no_tify
-# 直前と同じコマンドをヒストリに追加しない
-setopt hist_ignore_dups
-
-alias vi="vim"
-# tree N: 文字化け対策, C:色をつける
-alias tree="tree -NC"
-alias sed="gsed"
-alias awk="gawk"
-# cdしたあとで、自動的に ls する
-function chpwd() { ls -1 }
-
 # peco
 # ヒストリ(履歴)を保存、数を増やす
 HISTFILE=~/.zsh_history
@@ -81,3 +53,42 @@ function peco-select-history() {
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
+
+# TODO: oh-my-zshからの脱却
+# autoload -Uz colors
+# colors
+# PROMPT="%{${fg[yellow]}%}$%{${reset_color}%} "
+
+# 補完機能の強化
+autoload -U compinit
+# 入力しているコマンド名が間違っている場合にもしかして：を出す。
+setopt correct
+# ビープを鳴らさない
+setopt nobeep
+# 色を使う
+setopt prompt_subst
+# ^Dでログアウトしない。
+setopt ignoreeof
+# バックグラウンドジョブが終了したらすぐに知らせる。
+setopt no_tify
+# 直前と同じコマンドをヒストリに追加しない
+setopt hist_ignore_dups
+# cdしたあとで、自動的に ls する
+function chpwd() { ls -1 }
+
+# エイリアス
+alias vi="vim"
+# tree N: 文字化け対策, C:色をつける
+alias tree="tree -NC"
+alias sed="gsed"
+alias awk="gawk"
+alias tmux kill-server="kill_tmux"
+alias dotfiles="cd ~/.dotfiles; vim"
+alias desctop="cd ~/Desktop; vim"
+alias vi='(){
+if [ -e $1 ]; then
+    cd $1; vim
+else
+    vim $1
+fi
+}'
