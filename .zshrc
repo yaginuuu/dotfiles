@@ -85,7 +85,9 @@ alias tmux kill-server="kill_tmux"
 alias dotfiles="cd ~/.dotfiles; vim"
 alias desctop="cd ~/Desktop; vim"
 alias vi='(){
-if [ -e $1 ]; then
+if [ $# = 0 ]; then
+    vim
+elif [ -e $1 ]; then
     cd $1; vim
 else
     vim $1
