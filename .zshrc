@@ -75,6 +75,7 @@ setopt no_tify
 setopt hist_ignore_dups
 # cdしたあとで、自動的に ls する
 function chpwd() { ls -1 }
+setopt nonomatch
 
 # エイリアス
 # tree N: 文字化け対策, C:色をつける
@@ -90,9 +91,9 @@ if [ $# = 0 ]; then
     vim
 elif [ $1 = '.' ]; then
     vim
-elif [ -e $1 ]; then
-    cd $1; vim $1
+elif [ -d $1 ]; then
+    cd $1; vim
 else
-    vim
+    cd `dirname $1`; vim $1
 fi
 }'

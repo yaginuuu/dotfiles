@@ -16,5 +16,7 @@ if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
 
+let g:neosnippet#enable_conceal_markers = 0
+
 " Tell Neosnippet about the other snippets
 " let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
