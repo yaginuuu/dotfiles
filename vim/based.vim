@@ -120,12 +120,12 @@ map <silent> [Tag]n :tabnext<CR>
 " tp 前のタブ
 map <silent> [Tag]p :tabprevious<CR>
 " tt 一番右に新規タブを開いてツリーで表示
-map <silent> [Tag]t :tablast <bar> tabf .<CR>
+map <silent> [Tag]t :tablast <bar> tabnew .<CR>
 "-----------------------------------------------------------------------------"
 " NERDTree系
 " 隠しファイルを表示する
 let NERDTreeShowHidden = 1
-" nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 " デフォルトでツリーを表示させる
 autocmd VimEnter * execute 'NERDTree'
 "他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
