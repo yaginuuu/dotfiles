@@ -119,17 +119,20 @@ map <silent> [Tag]x :tabclose<CR>
 map <silent> [Tag]n :tabnext<CR>
 " tp 前のタブ
 map <silent> [Tag]p :tabprevious<CR>
-" tt 一番右に新規タブを開いてツリーで表示
-map <silent> [Tag]t :tablast <bar> tabnew .<CR>
+" tj 一番右に新規タブを開いてツリーで表示
+" <bar>で区切るとコマンドを複数指定できる
+map <silent> [Tag]j :tablast <bar> tabnew <bar> NERDTreeFocusToggle<CR>
 "-----------------------------------------------------------------------------"
 " NERDTree系
 " 隠しファイルを表示する
 let NERDTreeShowHidden = 1
-nnoremap <silent><C-e> :NERDTreeTabsToggle<CR>
+nnoremap <silent><C-e> :NERDTreeFocusToggle<CR>
 " デフォルトでツリーを表示させる
-autocmd VimEnter * execute 'NERDTree'
+let g:nerdtree_tabs_open_on_console_startup=1
 "他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" スマートフォーカス設定をやめる
+let g:nerdtree_tabs_smart_startup_focus=0
 "-----------------------------------------------------------------------------"
 " ダブルクォーテーション表示
 set conceallevel=0

@@ -28,10 +28,17 @@ fi
 ```
 ## vim
 - gs: 垂直分割でひらく
-
+- タブ系  
+```
+tx : タブを閉じる
+tn : 次のタブ
+tp : 前のタブ
+tj : 一番右に新規タブを開く
+C-e: NERDTreeTagsToggle
+```
 - emmet系
   - <Emmet式><C-y> , で展開
-  - ! -> htmlの雛形  
+  - !: htmlの雛形  
     http://motw.mods.jp/Vim/emmet-vim.html
   - ・<C-k>で次を記述
 - surround.vim系
@@ -83,3 +90,7 @@ noremap rr :<C-u>Unite rails/route<CR>
 noremap rg :<C-u>Unite rails/gemfile<CR>
 noremap rt :<C-u>Unite rails/spec<CR>
 ```
+
+## ToDo
+- TODO: 自作スニペットを作成したい
+

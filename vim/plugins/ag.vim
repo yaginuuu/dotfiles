@@ -1,9 +1,9 @@
-" insert modeで開始
-" let g:unite_enable_start_insert = 1
+" insert modeで開始で開始しない
+let g:unite_enable_start_insert=1
 
 " 大文字小文字を区別しない
-let g:unite_enable_ignore_case = 1
-let g:unite_enable_smart_case = 1
+let g:unite_enable_ignore_case=1
+let g:unite_enable_smart_case=1
 
 " grep検索
 nnoremap <silent> ,g  :<C-u>Unite grep:. -buffer-name=search-buffer -no-quit<CR>
@@ -22,3 +22,9 @@ if executable('ag')
 endif
 " 隠しファイル表示
 call unite#custom#source('file', 'matchers', "matcher_default")
+
+" TODO: Agコマンドのエイリアスを作成したい
+" command! -nargs=? G call s:Func_arg_zero_or_one(<f-args>)
+" function! s:Func_arg_zero_or_one(...)
+"     Ag(--hidden) a:1
+" endfunction

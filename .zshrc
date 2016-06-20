@@ -93,7 +93,9 @@ elif [ $1 = '.' ]; then
     vim
 elif [ -d $1 ]; then
     cd $1; vim
-else
+elif [ -f $1 ]; then
     cd `dirname $1`; vim $1
+else
+    vim $1
 fi
 }'

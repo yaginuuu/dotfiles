@@ -14,7 +14,6 @@ hook_post_update = '''
 '''
 
 # 補完系辞書
-# TODO: 自作スニペットを作成したい
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 [[plugins]]
