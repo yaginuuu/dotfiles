@@ -5,4 +5,4 @@
         ui = true
 [core]
         excludesfile = /Users/yaginuuu/.gitignore
-
+        editor = 'vim -u'
