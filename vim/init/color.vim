@@ -15,3 +15,8 @@ autocmd ColorScheme * highlight LineNr ctermfg=226
 
 " syntax enable
 " filetype plugin indent on
+
+set nocursorcolumn
+set nocursorline
+set norelativenumber
+syntax sync minlines=256
