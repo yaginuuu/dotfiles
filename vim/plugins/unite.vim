@@ -7,7 +7,7 @@ nnoremap <silent> ,ub :<C-u>Unite buffer -no-quit<CR>
 nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file -no-quit<CR>
 nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register -no-quit<CR>
 nnoremap <silent> ,uu :<C-u>Unite file_mru buffer -no-quit<CR>
-nnoremap <silent> ;e  :<C-u>Unite file_rec/async:! -no-quit<CR>
+nnoremap <silent> ,e  :<C-u>Unite file_rec/async:! -no-quit<CR>
 
 " 画面分割, 画面タブ設定
 nnoremap s <Nop>

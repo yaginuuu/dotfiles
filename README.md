@@ -78,7 +78,7 @@ D: <div class="section">|</div>
   nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
   nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
   nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
-  nnoremap <silent> ;e  :<C-u>Unite file_rec/async:!<CR>
+  nnoremap <silent> ,e  :<C-u>Unite file_rec/async:!<CR>
 ```
 - Unite-rails.vim系
 ```
