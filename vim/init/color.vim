@@ -20,3 +20,8 @@ set nocursorcolumn
 set nocursorline
 set norelativenumber
 syntax sync minlines=256
+
+" スクリプト実行中に画面を描画しない
+set lazyredraw
+" 高速ターミナル接続
+set ttyfast
