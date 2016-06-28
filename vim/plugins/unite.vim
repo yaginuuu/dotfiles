@@ -1,6 +1,7 @@
 let g:unite_enable_start_insert=1
 let g:unite_source_history_yank_enable =1
 let g:unite_source_file_mru_limit = 200
+
 nmap     <Leader>f [unite]
 nnoremap <silent> ,uy :<C-u>Unite history/yank -no-quit<CR>
 nnoremap <silent> ,ub :<C-u>Unite buffer -no-quit<CR>
@@ -36,15 +37,16 @@ nnoremap sq :<C-u>q<CR>
 nnoremap sQ :<C-u>bd<CR>
 nnoremap sb :<C-u>Unite buffer_tab -buffer-name=file -no-quit<CR>
 nnoremap sB :<C-u>Unite buffer -buffer-name=file -no-quit<CR>
+
 "------------------------------------
 " Unite-rails.vim
 "------------------------------------
-noremap rc :<C-u>Unite rails/controller<CR>
-noremap rm :<C-u>Unite rails/model<CR>
-noremap rv :<C-u>Unite rails/view<CR>
-noremap rh :<C-u>Unite rails/helper<CR>
-noremap rs :<C-u>Unite rails/stylesheet<CR>
-noremap rj :<C-u>Unite rails/javascript<CR>
-noremap rr :<C-u>Unite rails/route<CR>
-noremap rg :<C-u>Unite rails/gemfile<CR>
-noremap rt :<C-u>Unite rails/spec<CR>
+noremap rc :<C-u>Unite rails/controller -no-quit<CR>
+noremap rm :<C-u>Unite rails/model -no-quit<CR>
+noremap rv :<C-u>Unite rails/view -no-quit<CR>
+noremap rh :<C-u>Unite rails/helper -no-quit<CR>
+noremap rs :<C-u>Unite rails/stylesheet -no-quit<CR>
+noremap rj :<C-u>Unite rails/javascript -no-quit<CR>
+noremap rr :<C-u>Unite rails/route -no-quit<CR>
+noremap rg :<C-u>Unite rails/gemfile -no-quit<CR>
+noremap rt :<C-u>Unite rails/spec -no-quit<CR>
