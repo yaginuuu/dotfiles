@@ -99,3 +99,4 @@ else
     vim $1
 fi
 }'
+alias platform="cd ~/work/platform"

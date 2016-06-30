@@ -92,6 +92,8 @@ noremap rr :<C-u>Unite rails/route<CR>
 noremap rg :<C-u>Unite rails/gemfile<CR>
 noremap rt :<C-u>Unite rails/spec<CR>
 ```
+- vim_rails: gfで移動, 元に戻るにはC-o, :A, :R
+
 
 ## ToDo
 - TODO: 自作スニペットを作成したい
