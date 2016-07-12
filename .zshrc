@@ -86,10 +86,9 @@ alias kill_tmux="tmux kill-server"
 alias dotfiles="cd ~/.dotfiles; vim"
 alias desctop="cd ~/Desktop; vim"
 # FIXME: 補完でターゲットが2重に出現してしまう問題
-# FIXME: ディレクトリ移動後にそのパスでvimを開いているためうまく開けない問題
-# text=( ${(/)'${1}'} )
-# 絶対パスを取得しようとしている
 alias vi='(){
+pass=$1;
+file=(${(s:/:)hoge});
 if [ $# = 0 ]; then
     vim
 elif [ $1 = '.' ]; then
@@ -97,7 +96,7 @@ elif [ $1 = '.' ]; then
 elif [ -d $1 ]; then
     cd $1; vim
 elif [ -f $1 ]; then
-    cd `dirname $1`; vim
+    cd `dirname $1`; vim $file[-1]
 else
     vim $1
 fi
