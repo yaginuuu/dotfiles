@@ -36,7 +36,14 @@ tx : タブを閉じる
 gt : 次のタブ
 gT : 前のタブ
 tj : 一番右に新規タブを開く
+```
+- NERDTree系  
+```
 C-e: NERDTreeTagsToggle
+b  : ブックマークする
+D  : ブックマークを消す
+```
+
 ```
 - emmet系
   - <Emmet式><C-y> , で展開

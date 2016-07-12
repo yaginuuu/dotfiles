@@ -1,6 +1,7 @@
 mkdir -p ~/.vim/userautoload 2>/dev/null
 mkdir -p ~/.vim/userautoload/init 2>/dev/null
 mkdir -p ~/.vim/userautoload/plugins 2>/dev/null
+mkdir -p ~/.vim/ftplugin 2>/dev/null
 
 mkdir -p ~/.vim/rc 2>/dev/null
 mkdir -p ~/.vim/colors 2>/dev/null
@@ -25,6 +26,7 @@ ln -sf ~/.dotfiles/vim/plugins.vim ~/.vim/userautoload
 ln -sf ~/.dotfiles/vim/init/indent.vim ~/.vim/userautoload/init
 ln -sf ~/.dotfiles/vim/init/color.vim ~/.vim/userautoload/init
 ln -sf ~/.dotfiles/vim/init/template.vim ~/.vim/userautoload/init
+ln -sf ~/.dotfiles/vim/init/filetype.vim ~/.vim/userautoload/init
 
 ln -sf ~/.dotfiles/vim/plugins/ag.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/vim/plugins/caw.vim ~/.vim/userautoload/plugins
@@ -37,6 +39,10 @@ ln -sf ~/.dotfiles/vim/plugins/vim-startify.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/vim/plugins/vim-precious.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/vim/plugins/emmet.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/vim/plugins/neocomplete.vim ~/.vim/userautoload/plugins
+
+# ln -sf ~/.dotfiles/vim/init/filetype.vim ~/.vim
+# ln -sf ~/.dotfiles/vim/ftplugin/html.vim ~/.vim/ftplugin
+# ln -sf ~/.dotfiles/vim/ftplugin/eruby.vim ~/.vim/ftplugin
 
 ln -sf ~/.dotfiles/git/.gitignore ~/.gitignore
 ln -sf ~/.dotfiles/Vagrantfile ~/.vagrant.d/Vagrantfile

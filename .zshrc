@@ -88,13 +88,13 @@ alias desctop="cd ~/Desktop; vim"
 # FIXME: 補完でターゲットが2重に出現してしまう問題
 alias vi='(){
 pass=$1;
-file=(${(s:/:)hoge});
+file=(${(s:/:)pass});
 if [ $# = 0 ]; then
-    vim
+    vim -c NERDTreeFocusToggle
 elif [ $1 = '.' ]; then
-    vim
+    vim -c NERDTreeFocusToggle
 elif [ -d $1 ]; then
-    cd $1; vim
+    cd $1; vim -c NERDTreeFocusToggle
 elif [ -f $1 ]; then
     cd `dirname $1`; vim $file[-1]
 else

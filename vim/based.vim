@@ -27,6 +27,8 @@ set wildmenu
 set showcmd
 " 検索結果をハイライト表示する
 set hlsearch
+" filetypeプラグインによるindentをonにする
+filetype plugin indent on
 " 自動的に閉じカッコを入力してインデント
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
@@ -132,7 +134,10 @@ let g:nerdtree_tabs_open_on_console_startup=1
 "他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " スマートフォーカス設定をやめる
-let g:nerdtree_tabs_smart_startup_focus=0
+" let g:nerdtree_tabs_smart_startup_focus=0
+" ブックマークを表示する
+let g:NERDTreeShowBookmarks=1
+nnoremap <silent>b :Bookmark<CR>
 "-----------------------------------------------------------------------------"
 " ダブルクォーテーション表示
 set conceallevel=0
