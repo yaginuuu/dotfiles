@@ -104,4 +104,4 @@ noremap rt :<C-u>Unite rails/spec<CR>
 
 ## ToDo
 - TODO: 自作スニペットを作成したい
-
+- BUG : vimでファイルを開くときに予測変換で出現しない

@@ -7,8 +7,8 @@ nnoremap <silent> ,uy :<C-u>Unite history/yank -no-quit<CR>
 nnoremap <silent> ,ub :<C-u>Unite buffer -no-quit<CR>
 nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file -no-quit<CR>
 nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register -no-quit<CR>
-nnoremap <silent> ,uu :<C-u>Unite file_mru buffer -no-quit<CR>
-nnoremap <silent> ,e  :<C-u>Unite file_rec/async:! -no-quit<CR>
+nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
+nnoremap <silent> ,e  :<C-u>Unite file_rec/async:!<CR>
 
 " 画面分割, 画面タブ設定
 nnoremap s <Nop>
@@ -41,12 +41,13 @@ nnoremap sB :<C-u>Unite buffer -buffer-name=file -no-quit<CR>
 "------------------------------------
 " Unite-rails.vim
 "------------------------------------
-noremap rc :<C-u>Unite rails/controller -no-quit<CR>
-noremap rm :<C-u>Unite rails/model -no-quit<CR>
-noremap rv :<C-u>Unite rails/view -no-quit<CR>
-noremap rh :<C-u>Unite rails/helper -no-quit<CR>
-noremap rs :<C-u>Unite rails/stylesheet -no-quit<CR>
-noremap rj :<C-u>Unite rails/javascript -no-quit<CR>
-noremap rr :<C-u>Unite rails/route -no-quit<CR>
-noremap rg :<C-u>Unite rails/gemfile -no-quit<CR>
-noremap rt :<C-u>Unite rails/spec -no-quit<CR>
+" -no-quit: 検索画面を閉じないようにする
+noremap rc :<C-u>Unite rails/controller<CR>
+noremap rm :<C-u>Unite rails/model<CR>
+noremap rv :<C-u>Unite rails/view<CR>
+noremap rh :<C-u>Unite rails/helper<CR>
+noremap rs :<C-u>Unite rails/stylesheet<CR>
+noremap rj :<C-u>Unite rails/javascript<CR>
+noremap rr :<C-u>Unite rails/route<CR>
+noremap rg :<C-u>Unite rails/gemfile<CR>
+noremap rt :<C-u>Unite rails/spec<CR>
