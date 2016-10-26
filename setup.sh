@@ -45,6 +45,7 @@ ln -sf ~/.dotfiles/vim/plugins/neocomplete.vim ~/.vim/userautoload/plugins
 # ln -sf ~/.dotfiles/vim/ftplugin/eruby.vim ~/.vim/ftplugin
 
 ln -sf ~/.dotfiles/git/.gitignore ~/.gitignore
+ln -sf ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ln -sf ~/.dotfiles/Vagrantfile ~/.vagrant.d/Vagrantfile
 
 git config --global core.excludesfile ~/.gitignore

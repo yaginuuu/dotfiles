@@ -86,6 +86,7 @@ alias kill_tmux="tmux kill-server"
 alias dotfiles="cd ~/.dotfiles; vim"
 alias desctop="cd ~/Desktop; vim"
 # FIXME: 補完でターゲットが2重に出現してしまう問題
+# FIXME: 補完でファイル名が指定できない問題(ディレクトリではないため出現しない)
 alias vi='(){
 pass=$1;
 file=(${(s:/:)pass});
