@@ -26,6 +26,11 @@ else
 fi
 }'
 ```
+- git alias
+```
+git l # いい感じにグラフ化
+git s # 行単位ではなく単語単位での差分を表示
+```
 
 ## peco
 - C-rで起動
@@ -34,22 +39,22 @@ fi
 - ss: 水平分割でひらく
 - sv: 垂直分割でひらく
 - R : NERDTreeをリフレッシュする
-- タブ系  
+
+### タブ系
 ```
 tx : タブを閉じる
 gt : 次のタブ
 gT : 前のタブ
 tj : 一番右に新規タブを開く
 ```
-- NERDTree系  
+### NERDTree
 ```
 C-e: NERDTreeTagsToggle
 b  : ブックマークする
 D  : ブックマークを消す
 ```
 
-```
-- emmet系
+### emmet
   - <Emmet式><C-y> , で展開
   - !: htmlの雛形  
     http://motw.mods.jp/Vim/emmet-vim.html
@@ -80,7 +85,8 @@ I: <img src="" alt"|" />
 d: <div>|</div>
 D: <div class="section">|</div>
 ```
-- unite.vim系
+
+### unite.vim
 ```
 <Leader> = <C-g>
   nmap     <Leader>f [unite]
@@ -91,7 +97,8 @@ D: <div class="section">|</div>
   nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
   nnoremap <silent> ,e  :<C-u>Unite file_rec/async:!<CR>
 ```
-- Unite-rails.vim系
+
+### Unite-rails.vim
 ```
 noremap rc :<C-u>Unite rails/controller<CR>
 noremap rm :<C-u>Unite rails/model<CR>
@@ -103,7 +110,9 @@ noremap rr :<C-u>Unite rails/route<CR>
 noremap rg :<C-u>Unite rails/gemfile<CR>
 noremap rt :<C-u>Unite rails/spec<CR>
 ```
-- vim_rails: gfで移動, 元に戻るにはC-o, :A, :R
+
+### vim_rails
+- gfで移動, 元に戻るにはC-o, :A, :R
 
 
 ## ToDo
