@@ -26,6 +26,10 @@ else
 fi
 }'
 ```
+
+## peco
+- C-rで起動
+
 ## vim
 - ss: 水平分割でひらく
 - sv: 垂直分割でひらく
@@ -104,4 +108,4 @@ noremap rt :<C-u>Unite rails/spec<CR>
 
 ## ToDo
 - TODO: 自作スニペットを作成したい
-- BUG : vimでファイルを開くときに予測変換で出現しない
+- BUG : vimでファイルを開くときに予測変換で出現しない(cdできないからだと思われる)
