@@ -11,6 +11,7 @@
         <item>
             <name>Insert %</name>
             <identifier>private.Change_Control_to_Shift_5</identifier>
+            <only>TERMINAL</only>
             <autogen>--KeyToKey-- KeyCode::COMMA, VK_CONTROL, KeyCode::5, VK_SHIFT</autogen>
         </item>
     </list>
