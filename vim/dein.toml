@@ -89,6 +89,10 @@ repo = 'scrooloose/nerdtree'
 [[plugins]]
 repo = 'jistr/vim-nerdtree-tabs'
 
+# smarty
+[[plugins]]
+repo = 'vim-scripts/smarty-syntax'
+
 # \cでコメントアウトできる
 [[plugins]]
 repo = 'https://github.com/tyru/caw.vim'
