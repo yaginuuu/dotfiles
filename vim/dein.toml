@@ -13,6 +13,9 @@ hook_post_update = '''
   let g:dein#plugin.build = cmd
 '''
 
+[[plugins]]
+repo = 'aklt/plantuml-syntax'
+
 # 補完系辞書
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
