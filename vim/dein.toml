@@ -76,6 +76,9 @@ repo = 'Shougo/neomru.vim'
 repo = 'Shougo/unite.vim'
 depends = 'neomru.vim'
 
+[[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
+
 # シングルクオートとダブルクオートの入れ替え等
 # 'を"に変更        : cs'"
 # 行全体を囲む      : yss'

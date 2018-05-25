@@ -40,6 +40,7 @@ ln -sf ~/.dotfiles/vim/plugins/vim-precious.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/vim/plugins/emmet.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/vim/plugins/neocomplete.vim ~/.vim/userautoload/plugins
 ln -sf ~/.dotfiles/vim/plugins/plantuml.vim ~/.vim/userautoload/plugins
+ln -sf ~/.dotfiles/vim/plugins/ctrlp.vim ~/.vim/userautoload/plugins
 
 # ln -sf ~/.dotfiles/vim/init/filetype.vim ~/.vim
 # ln -sf ~/.dotfiles/vim/ftplugin/html.vim ~/.vim/ftplugin

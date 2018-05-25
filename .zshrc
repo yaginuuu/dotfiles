@@ -103,3 +103,4 @@ else
 fi
 }'
 alias platform="cd ~/work/platform"
+export PATH=$HOME/.nodebrew/current/bin:$PATH
