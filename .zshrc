@@ -28,11 +28,16 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 export MANPATH=/opt/local/man:$MANPATH
 
 # oh-my-zsh
-export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="amuse"
+# export ZSH=$HOME/.oh-my-zsh
+# ZSH_THEME="amuse"
 # update無効
-export DISABLE_AUTO_UPDATE="true"
-source $ZSH/oh-my-zsh.sh
+# export DISABLE_AUTO_UPDATE="true"
+# source $ZSH/oh-my-zsh.sh
+
+# cdコマンドを省略して、ディレクトリ名のみの入力で移動
+setopt auto_cd
+# コマンドミスを修正
+setopt correct
 
 # peco
 # ヒストリ(履歴)を保存、数を増やす
@@ -56,12 +61,54 @@ zle -N peco-select-history
 bindkey '^r' peco-select-history
 
 # TODO: oh-my-zshからの脱却
-# autoload -Uz colors
-# colors
-# PROMPT="%{${fg[yellow]}%}$%{${reset_color}%} "
+autoload -Uz colors
+colors
+PROMPT="%{${fg[yellow]}%}%~%{${reset_color}%}
+%{${fg[yellow]}%}$%{${reset_color}%} "
+
+# ブランチ名を色付きで表示させるメソッド
+function rprompt-git-current-branch {
+  local branch_name st branch_status
+
+  if [ ! -e  ".git" ]; then
+    # gitで管理されていないディレクトリは何も返さない
+    return
+  fi
+  branch_name=`git rev-parse --abbrev-ref HEAD 2> /dev/null`
+  st=`git status 2> /dev/null`
+  if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
+    # 全てcommitされてクリーンな状態
+    branch_status="%F{green}"
+  elif [[ -n `echo "$st" | grep "^Untracked files"` ]]; then
+    # gitに管理されていないファイルがある状態
+    branch_status="%F{red}?"
+  elif [[ -n `echo "$st" | grep "^Changes not staged for commit"` ]]; then
+    # git addされていないファイルがある状態
+    branch_status="%F{red}+"
+  elif [[ -n `echo "$st" | grep "^Changes to be committed"` ]]; then
+    # git commitされていないファイルがある状態
+    branch_status="%F{yellow}!"
+  elif [[ -n `echo "$st" | grep "^rebase in progress"` ]]; then
+    # コンフリクトが起こった状態
+    echo "%F{red}!(no branch)"
+    return
+  else
+    # 上記以外の状態の場合は青色で表示させる
+    branch_status="%F{blue}"
+  fi
+  # ブランチ名を色付きで表示する
+  echo "${branch_status}[$branch_name]"
+}
+# プロンプトが表示されるたびにプロンプト文字列を評価、置換する
+setopt prompt_subst
+# プロンプトの右側(RPROMPT)にメソッドの結果を表示させる
+RPROMPT='`rprompt-git-current-branch`'
 
 # 補完機能の強化
 autoload -U compinit
+compinit
+zstyle ':completion:*' menu select
+
 # 入力しているコマンド名が間違っている場合にもしかして：を出す。
 setopt correct
 # ビープを鳴らさない
