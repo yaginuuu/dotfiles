@@ -11,6 +11,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export TERM=xterm-256color
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export LANG=ja_JP.UTF-8
 
 # エディタ設定
 export EDITOR=/usr/local/bin/vim
@@ -73,6 +74,8 @@ setopt ignoreeof
 setopt no_tify
 # 直前と同じコマンドをヒストリに追加しない
 setopt hist_ignore_dups
+# 同じコマンドをヒストリに残さない
+setopt hist_ignore_all_dups
 # cdしたあとで、自動的に ls する
 function chpwd() { ls -1 }
 setopt nonomatch
@@ -104,3 +107,8 @@ fi
 }'
 alias platform="cd ~/work/platform"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="$HOME/Library/Python/2.7/bin:$PATH"
+[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"

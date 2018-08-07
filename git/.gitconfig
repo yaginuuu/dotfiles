@@ -9,3 +9,4 @@
 [alias]
         logs  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
         difff = diff --word-diff
+        flog  = zsh -c "log --oneline | fzf --preview 'echo {} | cut -c 1-7 |xargs git show' | pbcopy"
