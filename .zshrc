@@ -60,12 +60,6 @@ function peco-select-history() {
 zle -N peco-select-history
 bindkey '^r' peco-select-history
 
-# TODO: oh-my-zshからの脱却
-autoload -Uz colors
-colors
-PROMPT="%{${fg[yellow]}%}%~%{${reset_color}%}
-%{${fg[yellow]}%}$%{${reset_color}%} "
-
 # ブランチ名を色付きで表示させるメソッド
 function rprompt-git-current-branch {
   local branch_name st branch_status
@@ -97,12 +91,16 @@ function rprompt-git-current-branch {
     branch_status="%F{blue}"
   fi
   # ブランチ名を色付きで表示する
-  echo "${branch_status}[$branch_name]"
+  echo "${branch_status}[$branch_name]%{${reset_color}%}"
 }
 # プロンプトが表示されるたびにプロンプト文字列を評価、置換する
 setopt prompt_subst
-# プロンプトの右側(RPROMPT)にメソッドの結果を表示させる
-RPROMPT='`rprompt-git-current-branch`'
+# TODO: oh-my-zshからの脱却
+autoload -Uz colors
+colors
+PROMPT=$'%{${fg[blue]}%}%~%{${reset_color}%} `rprompt-git-current-branch`
+%{${fg[blue]}%}$%{${reset_color}%} '
+
 
 # 補完機能の強化
 autoload -U compinit
