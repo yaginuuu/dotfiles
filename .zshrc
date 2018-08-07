@@ -17,8 +17,8 @@ export LANG=ja_JP.UTF-8
 export EDITOR=/usr/local/bin/vim
 
 # ページャ設定
-export PAGER=/usr/local/bin/vimpager
-export MANPAGER=/usr/local/bin/vimpager
+# export PAGER=vimpager
+# export MANPAGER=/usr/local/bin/vimpager
 
 # MacPorts
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:${PATH}
