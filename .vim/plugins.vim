@@ -12,20 +12,16 @@ if &runtimepath !~# '/dein.vim'
 endif
 
 " プラグインリストを収めたtomlファイル
-let s:toml      = '~/.vim/rc/dein.toml'
-" let s:lazy_toml = '~/.vim/rc/dein_lazy.toml'
+let s:toml      = '~/.vim/dein.toml'
 
-" tomlを読み込み, キャッシュ
-" if dein#load_state(s:dein_dir)
-  " 設定開始
-  call dein#begin(s:dein_dir)
-  call dein#load_toml(s:toml)
-  call dein#end()
-  call dein#save_state()
-" endif
+call dein#begin(s:dein_dir)
+call dein#load_toml(s:toml)
+call dein#end()
+call dein#save_state()
 
 " もし, 未インストールのプラグインが存在したらインストールを実施
 if dein#check_install()
   call dein#install()
+  call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 endif
 

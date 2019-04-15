@@ -1,11 +1,21 @@
 # rbenv
-export PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+# mysql
 export PATH=$PATH:/usr/local/mysql/bin
-
-# Heroku
+# heroku
 export PATH="/usr/local/heroku/bin:$PATH"
+# エディタ
+export EDITOR=/usr/local/bin/vim
+# MacPorts
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:${PATH}
+export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# phpbrew
+[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
 
 # sshで接続した先で日本語が使えるようにする
 export TERM=xterm-256color
@@ -13,34 +23,12 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LANG=ja_JP.UTF-8
 
-# エディタ設定
-export EDITOR=/usr/local/bin/vim
-
-# ページャ設定
-# export PAGER=vimpager
-# export MANPAGER=/usr/local/bin/vimpager
-
-# MacPorts
-export PATH=/usr/local/opt/coreutils/libexec/gnubin:${PATH}
-export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}
-
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-export MANPATH=/opt/local/man:$MANPATH
-
-# oh-my-zsh
-# export ZSH=$HOME/.oh-my-zsh
-# ZSH_THEME="amuse"
-# update無効
-# export DISABLE_AUTO_UPDATE="true"
-# source $ZSH/oh-my-zsh.sh
-
 # cdコマンドを省略して、ディレクトリ名のみの入力で移動
 setopt auto_cd
 # コマンドミスを修正
 setopt correct
 
-# peco
-# ヒストリ(履歴)を保存、数を増やす
+# peco: ヒストリ(履歴)を保存、数を増やす
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
@@ -151,9 +139,3 @@ else
 fi
 }'
 alias platform="cd ~/work/platform"
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="$HOME/Library/Python/2.7/bin:$PATH"
-[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
-export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"

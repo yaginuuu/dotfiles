@@ -1,0 +1,4 @@
+runtime! based.vim
+runtime! plugins.vim
+runtime! init/*.vim
+runtime! plugins/*.vim
