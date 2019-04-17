@@ -1,4 +1,5 @@
 ln -sfn ~/dotfiles/.vim ~/.vim
+ln -sfn ~/dotfiles/.zsh.d ~/.zsh.d
 
 ln -sf ~/dotfiles/.bash_profile ~/
 ln -sf ~/dotfiles/.tmux.conf ~/
