@@ -1,6 +1,6 @@
-autoload -Uz colors; colors
+autoload -Uz colors && colors
 # 補完機能の強化
-autoload -U compinit; compinit
+autoload -Uz compinit && compinit -u
 
 zstyle ':completion:*' menu select
 # 補完で小文字でも大文字にマッチさせる

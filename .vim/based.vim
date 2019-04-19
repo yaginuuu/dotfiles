@@ -27,6 +27,12 @@ set wildmenu
 set showcmd
 " 検索結果をハイライト表示する
 set hlsearch
+" 小文字で検索した場合は、大文字小文字の違いは無視、大文字を含む文字列で検索した場合は無視しない
+set smartcase
+" インクリメンタルサーチ
+set incsearch
+" 最下ウィンドウにステータス行を常に表示
+set laststatus=2
 " filetypeプラグインによるindentをonにする
 filetype plugin indent on
 " 自動的に閉じカッコを入力してインデント
@@ -143,3 +149,6 @@ nnoremap <silent>b :Bookmark<CR>
 set conceallevel=0
 " jsonファイルのダブルクォーテーション表示
 let g:vim_json_syntax_conceal = 0
+
+" 常にgitgutterを表示
+set signcolumn=yes

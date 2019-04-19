@@ -47,3 +47,6 @@ setopt extended_glob
 
 # git show HEAD^とかrake foo[bar]とか使いたい
 setopt no_nomatch
+
+# 補完候補一覧でファイルの種別をマーク表示
+setopt list_types

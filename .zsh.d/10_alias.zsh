@@ -22,5 +22,6 @@ else
     vim $1
 fi
 }'
+alias t=tmux
 
 alias -s rb=ruby

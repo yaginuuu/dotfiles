@@ -149,31 +149,13 @@ repo = 'elzr/vim-json'
 # Emmet式<C-y>, で展開できる
 [[plugins]]
 repo = 'mattn/emmet-vim'
-# ------------------------------------------------------
-# vimのスタート画面をいい感じにしてくれる
-# なんか日本語表記になってないっぽい
-# [[plugins]]
-# repo = 'mhinz/vim-startify'
 
-# コンテキストに応じて, ファイルタイプを変更できる
-# [[plugins]]
-# repo = 'osyo-manga/vim-precious'
-# [[plugins]]
-# repo = 'Shougo/context_filetype.vim'
-# htmlの文法チェック
-# [[plugins]]
-# repo = 'hokaccha/vim-html5validator'
-# :Switchでキーワード切り替え
-# [[plugins]]
-# repo = 'AndrewRadev/switch.vim'
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
 
-# # 連続スクロールを実現するために必要
+# 連続スクロールを実現するために必要
 # [[plugins]]
 # repo = 'kana/vim-submode'
-
-# slim syntax
-# [[plugins]]
-# repo = 'slim-template/vim-slim.git'
 
 # コーディングルールチェック
 # # [[plugins]]
