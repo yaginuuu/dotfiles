@@ -1,5 +1,5 @@
 # cdしたあとで、自動的に ls する
-function chpwd() { ls -ltr --color=auto }
+function chpwd() { ls -ltr -G }
 
 # ブランチ名を色付きで表示させるメソッド
 function rprompt-git-current-branch {

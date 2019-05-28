@@ -33,6 +33,7 @@ set smartcase
 set incsearch
 " 最下ウィンドウにステータス行を常に表示
 set laststatus=2
+set viminfofile=NONE
 " filetypeプラグインによるindentをonにする
 filetype plugin indent on
 " 自動的に閉じカッコを入力してインデント
